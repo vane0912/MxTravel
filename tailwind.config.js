@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors:{
         'agency-blue': '#1E3A8A',
-        'agency-white': '#F0F4EF'
+        'agency-white': '#F0F4EF',
+        'agency-orange': '#ED7445'
       },
       padding: {
         'padding-grid': '90px',
