@@ -1,5 +1,8 @@
 <template>
-    <button class="w-64 h-16 bg-agency-orange text-agency-white rounded-tl-full rounded-br-full">
+    <button class="
+    w-64 h-16 bg-agency-orange text-agency-white rounded-tl-full rounded-br-full
+    hover:bg-agency-orange/85
+    ">
         {{ btnTxt }}
     </button>
 </template>

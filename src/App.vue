@@ -14,7 +14,5 @@
         </router-link>
       </div>
   </nav>
-  <div class="grid-cols-12 grid w-full px-padding-grid">
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
