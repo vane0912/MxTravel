@@ -8,11 +8,11 @@ module.exports = {
     extend: {
       colors:{
         'agency-blue': '#1E3A8A',
-        'agency-white': '#EEEEEE',
+        'agency-white': '#F8F8F8',
         'agency-orange': '#FF6E35'
       },
       padding: {
-        'padding-grid': '90px',
+        'padding-grid': '5.6rem',
       },
       dropShadow: {
         'custom': [
@@ -21,7 +21,13 @@ module.exports = {
         ]
       },
       width: {
-        'our_services': '4rem',
+        'our_services': '4.3rem',
+      },
+      height:{
+        'our_services': '4.3rem',
+      },
+      borderRadius: {
+        '4xl': '1.8rem'
       }
     },
   },

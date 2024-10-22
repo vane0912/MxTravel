@@ -72,10 +72,38 @@
     :img_src="autobus"
     service_txt="Paquetes Vacacionales"
     />
-    <div class="w-full col-span-12 my-10">
-      <h2 class="text-agency-blue">¿Por qué elegirnos?</h2>
+    <h2 class="text-agency-blue col-span-12 w-full mt-10">¿Por qué elegirnos?</h2>
+    <img 
+    class="rounded-4xl mb-7 col-span-6 self-center"
+    src="../assets/homepage_why_choose_us.png">
+    <div class="col-span-6 self">
+      <ChooseUs
+      :icon="experience"
+      class="mb-10"
+      title_txt="Mas de una década de experiencia"
+      paragraph="Nuestra sólida trayectoria en el sector turístico nos permite brindarte productos y servicios de la más alta calidad, asegurando que cada detalle de tu viaje sea perfecto."
+      />
+      <ChooseUs
+        :icon="costumer"
+        class="mb-10"
+        title_txt="Atención personalizada"
+        paragraph="Cada cliente es único, y nos enfocamos en ofrecerte un servicio ajustado a tus necesidades, para que disfrutes de una experiencia vacacional hecha a tu medida."
+      />
+      <ChooseUs
+        :icon="one_place"
+        class="mb-10"
+        title_txt="Todo en un solo lugar"
+        paragraph="Desde trámites de visas hasta la renta de autos o la reserva de hoteles, nos encargamos de todo. Nos ocupamos de cada paso del proceso para que tú solo te concentres en disfrutar tu viaje."
+      />
+      <ChooseUs
+      :icon="loyalty"
+      title_txt="Confianza y lealtad"
+      paragraph="La fidelidad de nuestros clientes es nuestro mayor respaldo. Trabajamos continuamente para ganar y mantener tu confianza, asegurando que siempre recibas un servicio excepcional."
+      />
     </div>
-    
+    <div class="col-span-12 w-full flex justify-center mt-12">
+      <BtnGeneral btnTxt="Conocenos"></BtnGeneral>
+    </div>
   </div>
 </template>
 <script setup>
@@ -85,8 +113,13 @@ import chiapas from '@/assets/Chiapas.png'
 import autobus from '@/assets/our_services/playa.png'
 import avion from '@/assets/our_services/avion.png'
 import boletos_de_avion from '@/assets/our_services/boletos-de-avion.png'
+import experience from '@/assets/why_choose_us/diez_años.png'
+import loyalty from '@/assets/why_choose_us/lealtad.png'
+import costumer from '@/assets/why_choose_us/servicio-al-cliente.png'
+import one_place from '@/assets/why_choose_us/servicios-de-apoyo.png'
 import { onMounted, } from 'vue';
 import OurServices from '@/components/OurServices.vue';
+import ChooseUs from '@/components/ChooseUs.vue';
 
 onMounted(() => {
   document.title = "Mx Travel";
