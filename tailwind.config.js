@@ -19,6 +19,9 @@ module.exports = {
           '0 10px 8px rgb(0 0 0 / 0.1)',
           '0px 2px rgba(0, 0, 0, 0.4)'
         ]
+      },
+      width: {
+        'our_services': '4rem',
       }
     },
   },
