@@ -8,11 +8,17 @@ module.exports = {
     extend: {
       colors:{
         'agency-blue': '#1E3A8A',
-        'agency-white': '#F0F4EF',
+        'agency-white': '#EEEEEE',
         'agency-orange': '#FF6E35'
       },
       padding: {
         'padding-grid': '90px',
+      },
+      dropShadow: {
+        'custom': [
+          '0 10px 8px rgb(0 0 0 / 0.1)',
+          '0px 2px rgba(0, 0, 0, 0.4)'
+        ]
       }
     },
   },
