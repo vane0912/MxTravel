@@ -11,46 +11,37 @@
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-4 px-padding-grid">
-    <div class="w-full col-span-12 mb-10">
-      <h2 class="text-agency-blue">Los lugares favoritos de nuestros viajeros</h2>
-    </div>
+    <h2 class="text-agency-blue w-full col-span-12 mb-10">Los lugares favoritos de nuestros viajeros</h2>
     <MostPopular
-      class="col-span-6"
+      class="col-span-4"
         state_title="Chiapas"
         :img_src="chiapas"
     />
     <MostPopular
-      class="col-span-6"
+      class="col-span-4"
       state_title="Chiapas"
       :img_src="chiapas"
     />
     <MostPopular
-      class="col-span-6"
+      class="col-span-4"
       state_title="Chiapas"
       :img_src="chiapas"
     />
-    <MostPopular
-      class="col-span-6"
-      state_title="Chiapas"
-      :img_src="chiapas"
-    />
-    <div class="w-full col-span-12 my-10">
-      <h2 class="text-agency-blue">Nuestros servicios</h2>
-    </div>
-    <OurServices
-    :img_src="autobus"
-    service_txt="Paquetes Vacacionales"
-    class="col-span-3"
-    />
+    <h2 class="text-agency-blue w-full col-span-12 my-10">Nuestros servicios</h2>
     <OurServices
     class="col-span-3"
-    :img_src="autobus"
+    :img_src="playa"
     service_txt="Paquetes Vacacionales"
     />
     <OurServices
     class="col-span-3"
-    :img_src="autobus"
-    service_txt="Paquetes Vacacionales"
+    :img_src="pasaporte"
+    service_txt="Tramite de visas y pasaporte"
+    />
+    <OurServices
+    class="col-span-3"
+    :img_src="boda"
+    service_txt="Bodas en la playa"
     />
     <OurServices
     class="col-span-3"
@@ -58,50 +49,59 @@
     service_txt="Boletos de avión y autobus"
     />
     <OurServices
-    class="col-start-2"
+    class="col-span-3"
     :img_src="avion"
     service_txt="Charters aéreos y terrestres"
     />
     <OurServices
-    class="col-start-6 col-end-8 justify-self-center"
-    :img_src="autobus"
-    service_txt="Paquetes Vacacionales"
+    class="col-span-3"
+    :img_src="hotel"
+    service_txt="Reservación de hoteles"
     />
     <OurServices
-    class="col-start-9 col-end-11"
+    class="col-span-3"
     :img_src="autobus"
-    service_txt="Paquetes Vacacionales"
+    service_txt="Renta de autobuses y vans"
     />
-    <h2 class="text-agency-blue col-span-12 w-full mt-10">¿Por qué elegirnos?</h2>
-    <img 
-    class="rounded-4xl mb-7 col-span-6 self-center"
-    src="../assets/homepage_why_choose_us.png">
-    <div class="col-span-6 self">
-      <ChooseUs
-      :icon="experience"
-      class="mb-10"
-      title_txt="Mas de una década de experiencia"
-      paragraph="Nuestra sólida trayectoria en el sector turístico nos permite brindarte productos y servicios de la más alta calidad, asegurando que cada detalle de tu viaje sea perfecto."
-      />
-      <ChooseUs
-        :icon="costumer"
-        class="mb-10"
-        title_txt="Atención personalizada"
-        paragraph="Cada cliente es único, y nos enfocamos en ofrecerte un servicio ajustado a tus necesidades, para que disfrutes de una experiencia vacacional hecha a tu medida."
-      />
-      <ChooseUs
-        :icon="one_place"
-        class="mb-10"
-        title_txt="Todo en un solo lugar"
-        paragraph="Desde trámites de visas hasta la renta de autos o la reserva de hoteles, nos encargamos de todo. Nos ocupamos de cada paso del proceso para que tú solo te concentres en disfrutar tu viaje."
-      />
-      <ChooseUs
-      :icon="loyalty"
-      title_txt="Confianza y lealtad"
-      paragraph="La fidelidad de nuestros clientes es nuestro mayor respaldo. Trabajamos continuamente para ganar y mantener tu confianza, asegurando que siempre recibas un servicio excepcional."
-      />
+    <OurServices
+    class="col-span-3"
+    :img_src="visa"
+    service_txt="Gestion de Visados"
+    />
+    <h2 class="text-agency-blue col-span-12 w-full my-10">¿Por qué elegirnos?</h2>
+    <div class="col-span-12 flex justify-between">
+      <div class="w-5/12 shrink-0 mr-20">
+        <img 
+        class="rounded-4xl shrink-0 object-fill h-full"
+        src="../assets/homepage_why_choose_us.png">
+      </div>
+      <div class="h-7/12">
+        <ChooseUs 
+          :icon="experience"
+          class="mb-8"
+          title_txt="Mas de una década de experiencia"
+          paragraph="Nuestra sólida trayectoria en el sector turístico nos permite brindarte productos y servicios de la más alta calidad, asegurando que cada detalle de tu viaje sea perfecto."
+        />
+        <ChooseUs 
+          class="mb-8"
+          :icon="costumer"
+          title_txt="Atención personalizada"
+          paragraph="Cada cliente es único, y nos enfocamos en ofrecerte un servicio ajustado a tus necesidades, para que disfrutes de una experiencia vacacional hecha a tu medida."
+        />
+        <ChooseUs
+          class="mb-8"
+          :icon="one_place"
+          title_txt="Todo en un solo lugar"
+          paragraph="Desde trámites de visas hasta la renta de autos o la reserva de hoteles, nos encargamos de todo. Nos ocupamos de cada paso del proceso para que tú solo te concentres en disfrutar tu viaje."
+        />
+        <ChooseUs
+          :icon="loyalty"
+          title_txt="Confianza y lealtad"
+          paragraph="La fidelidad de nuestros clientes es nuestro mayor respaldo. Trabajamos continuamente para ganar y mantener tu confianza, asegurando que siempre recibas un servicio excepcional."
+        />
+      </div>
     </div>
-    <div class="col-span-12 w-full flex justify-center mt-12">
+    <div class="col-span-12 w-full flex justify-center my-12">
       <BtnGeneral btnTxt="Conocenos"></BtnGeneral>
     </div>
   </div>
@@ -110,9 +110,16 @@
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import MostPopular from '@/components/MostPopular.vue';
 import chiapas from '@/assets/Chiapas.png'
-import autobus from '@/assets/our_services/playa.png'
+
+import autobus from '@/assets/our_services/autobus.png'
 import avion from '@/assets/our_services/avion.png'
+import boda from '@/assets/our_services/boda.png'
+import hotel from '@/assets/our_services/hotel.png'
+import pasaporte from '@/assets/our_services/pasaporte.png'
+import playa from '@/assets/our_services/playa.png'
 import boletos_de_avion from '@/assets/our_services/boletos-de-avion.png'
+import visa from '@/assets/our_services/visa.png'
+
 import experience from '@/assets/why_choose_us/diez_años.png'
 import loyalty from '@/assets/why_choose_us/lealtad.png'
 import costumer from '@/assets/why_choose_us/servicio-al-cliente.png'

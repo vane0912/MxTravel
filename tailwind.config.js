@@ -22,6 +22,7 @@ module.exports = {
       },
       width: {
         'our_services': '4.3rem',
+        'why_choose_us': '35rem'
       },
       height:{
         'our_services': '4.3rem',

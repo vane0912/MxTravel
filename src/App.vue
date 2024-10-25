@@ -15,4 +15,7 @@
       </div>
   </nav>
   <router-view/>
+  <footer class="w-full h-20 bg-agency-blue/80">
+
+  </footer>
 </template>

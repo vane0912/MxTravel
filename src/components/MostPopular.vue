@@ -3,16 +3,22 @@
     @mouseover="hovering_state = true"
     @mouseout="hovering_state = false"
     class="w-full relative rounded-2xl drop-shadow-custom cursor-pointer">
-        <img class="w-full h-72 rounded-2xl" :src="img_src" alt="">
+        <img class="w-full h-96 rounded-2xl" :src="img_src" alt="">
         <div 
         class="w-full bg-agency-blue/70 h-fit absolute flex justify-center flex-col bottom-0 rounded-b-2xl py-4 px-5">
             <div class="flex items-center">
-                <h3 class="text-agency-white leading-none mr-1">{{ state_title }}</h3>
-                <img class="w-3 h-3 mx-1" src="../assets/estrella.png" alt="star" v-for="n in 5" :key="n">
+                <h3 
+                :class="{'translate-y-0 opacity-100': hovering_state, 'translate-y-3': !hovering_state}"
+                class="text-agency-white leading-none mr-1 mb-1 transition-all duration-500">{{ state_title }}</h3>
             </div>
-            <h4 :class="{'translate-y-0 opacity-100': hovering_state, 'translate-y-full opacity-0': !hovering_state}"
-              class="text-agency-white transform transition-all duration-500 ease-out"
-            >Cotizar -></h4>
+            <div class="flex items-center">
+                <h4 :class="{'translate-y-0 opacity-100': hovering_state, 'translate-y-full opacity-0': !hovering_state}"
+                class="text-agency-white transform transition-all duration-500 ease-out"
+                >Cotizar</h4>
+                <img :class="{'translate-y-0 opacity-100': hovering_state, 'translate-y-full opacity-0': !hovering_state}"
+                class="transform transition-all duration-500 ease-out w-5 ml-2 mt-2 h-5"
+                src="../assets/next_arrow.png" alt="cotizar">
+            </div>
         </div>
     </div>
 </template>
