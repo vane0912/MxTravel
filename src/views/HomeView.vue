@@ -3,11 +3,11 @@
     <div class="absolute left-0 w-full px-20 py-14 flex items-center h-full bg-agency-blue/40 z-10" >
     <div class="w-full">
       <h1 class="text-agency-white/90 drop-shadow-custom mb-6">Explora el mundo con los mejores precios y servicio garantizado</h1>
-      <BtnGeneral btnTxt="Cotiza Ahora!"/>
+      <BtnGeneral btnTxt="Cotiza Ahora"/>
     </div>
     </div>
     <div class="absolute left-0 w-full h-full">
-      <img class="w-full h-full" src="../assets/bg-homepage.png" alt="">
+      <img class="object-cover h-full w-full" src="../assets/bg-homepage.png" alt="">
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-4 px-padding-grid">
@@ -70,12 +70,12 @@
     />
     <h2 class="text-agency-blue col-span-12 w-full my-10">¿Por qué elegirnos?</h2>
     <div class="col-span-12 flex justify-between">
-      <div class="w-5/12 shrink-0 mr-20">
+      <div class="w-5/12 z-10 ">
         <img 
-        class="rounded-4xl shrink-0 object-fill h-full"
+        class="rounded-4xl h-full object-cover object-center"
         src="../assets/homepage_why_choose_us.png">
       </div>
-      <div class="h-7/12">
+      <div class="w-7/12">
         <ChooseUs 
           :icon="experience"
           class="mb-8"

@@ -3,7 +3,9 @@
     @mouseover="hovering_state = true"
     @mouseout="hovering_state = false"
     class="w-full relative rounded-2xl drop-shadow-custom cursor-pointer">
-        <img class="w-full h-96 rounded-2xl" :src="img_src" alt="">
+        <div class="w-full h-96">
+            <img class="object-cover h-full rounded-2xl" :src="img_src" alt="">
+        </div>
         <div 
         class="w-full bg-agency-blue/70 h-fit absolute flex justify-center flex-col bottom-0 rounded-b-2xl py-4 px-5">
             <div class="flex items-center">
