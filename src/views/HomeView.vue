@@ -1,8 +1,8 @@
 <template>
   <div class="relative h-3/4"> 
-    <div class="absolute left-0 w-full px-20 py-14 flex items-center h-full bg-agency-blue/40 z-10" >
+    <div class="absolute left-0 w-full px-20 py-14 flex items-center h-full bg-agency-blue/30 z-10" >
     <div class="w-full">
-      <h1 class="text-agency-white/90 drop-shadow-custom mb-6">Explora el mundo con los mejores precios y servicio garantizado</h1>
+      <h1 class="text-agency-white drop-shadow-custom mb-6">Explora el mundo con los mejores precios y servicio garantizado</h1>
       <BtnGeneral btnTxt="Cotiza Ahora"/>
     </div>
     </div>
@@ -10,24 +10,24 @@
       <img class="object-cover h-full w-full" src="../assets/bg-homepage.png" alt="">
     </div>
   </div>
-  <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-4 px-padding-grid">
-    <h2 class="text-agency-blue w-full col-span-12 mb-10">Los lugares favoritos de nuestros viajeros</h2>
+  <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-12 px-padding-grid">
+    <h2 class="text-agency-blue w-full col-span-12 my-3">Los lugares favoritos de nuestros viajeros</h2>
     <MostPopular
       class="col-span-4"
-        state_title="Chiapas"
-        :img_src="chiapas"
+        state_title="El Chepe"
+        :img_src="chepe"
     />
     <MostPopular
       class="col-span-4"
-      state_title="Chiapas"
-      :img_src="chiapas"
+      state_title="Mazatlán"
+      :img_src="mazatlan"
     />
     <MostPopular
       class="col-span-4"
-      state_title="Chiapas"
-      :img_src="chiapas"
+      state_title="Cancún"
+      :img_src="cancun"
     />
-    <h2 class="text-agency-blue w-full col-span-12 my-10">Nuestros servicios</h2>
+    <h2 class="text-agency-blue w-full col-span-12 my-3">Nuestros servicios</h2>
     <OurServices
     class="col-span-3"
     :img_src="playa"
@@ -68,7 +68,7 @@
     :img_src="visa"
     service_txt="Gestion de Visados"
     />
-    <h2 class="text-agency-blue col-span-12 w-full my-10">¿Por qué elegirnos?</h2>
+    <h2 class="text-agency-blue col-span-12 w-full my-3">¿Por qué elegirnos?</h2>
     <div class="col-span-12 flex justify-between">
       <div class="w-5/12 z-10 ">
         <img 
@@ -109,21 +109,23 @@
 <script setup>
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import MostPopular from '@/components/MostPopular.vue';
-import chiapas from '@/assets/Chiapas.png'
+import chepe from '@/assets/el_chepe.png'
+import mazatlan from '@/assets/mazatlan.png'
+import cancun from '@/assets/cancun.png'
 
-import autobus from '@/assets/our_services/autobus.png'
-import avion from '@/assets/our_services/avion.png'
-import boda from '@/assets/our_services/boda.png'
-import hotel from '@/assets/our_services/hotel.png'
-import pasaporte from '@/assets/our_services/pasaporte.png'
-import playa from '@/assets/our_services/playa.png'
-import boletos_de_avion from '@/assets/our_services/boletos-de-avion.png'
-import visa from '@/assets/our_services/visa.png'
+import autobus from '@/assets/our_services/agency_blue/autobus.png'
+import avion from '@/assets/our_services/agency_blue/avion.png'
+import boda from '@/assets/our_services/agency_blue/boda.png'
+import hotel from '@/assets/our_services/agency_blue/hotel.png'
+import pasaporte from '@/assets/our_services/agency_blue/pasaporte.png'
+import playa from '@/assets/our_services/agency_blue/playa.png'
+import boletos_de_avion from '@/assets/our_services/agency_blue/boletos-de-avion.png'
+import visa from '@/assets/our_services/agency_blue/visa.png'
 
-import experience from '@/assets/why_choose_us/diez_años.png'
-import loyalty from '@/assets/why_choose_us/lealtad.png'
-import costumer from '@/assets/why_choose_us/servicio-al-cliente.png'
-import one_place from '@/assets/why_choose_us/servicios-de-apoyo.png'
+import experience from '@/assets/why_choose_us/agency_blue/diez_años.png'
+import loyalty from '@/assets/why_choose_us/agency_blue/lealtad.png'
+import costumer from '@/assets/why_choose_us/agency_blue/servicio-al-cliente.png'
+import one_place from '@/assets/why_choose_us/agency_blue/servicios-de-apoyo.png'
 import { onMounted, } from 'vue';
 import OurServices from '@/components/OurServices.vue';
 import ChooseUs from '@/components/ChooseUs.vue';

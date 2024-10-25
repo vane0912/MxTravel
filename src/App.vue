@@ -1,8 +1,8 @@
 <template>
-  <nav class="w-full h-20 bg-agency-blue/80 flex px-padding-grid justify-between items-center">
+  <nav class="w-full h-20 bg-agency-blue flex px-padding-grid sticky top-0 z-20 justify-between items-center">
       <div>
         <router-link to="/">
-          <img class="w-14 h-14" src="./assets/MxTravel.png" alt="">
+          <img class="w-20 h-20" src="./assets/MxTravel.png" alt="">
         </router-link>
       </div>
       <div class="flex w-2/6 justify-between">
@@ -15,7 +15,7 @@
       </div>
   </nav>
   <router-view/>
-  <footer class="w-full h-20 bg-agency-blue/80">
+  <footer class="w-full h-20 bg-agency-blue">
 
   </footer>
 </template>

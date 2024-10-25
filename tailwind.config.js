@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'agency-blue': '#1E3A8A',
-        'agency-white': '#F8F8F8',
+        'agency-blue': '#2B6CAE',
+        'agency-white': '#EEEEEE',
         'agency-orange': '#FF6E35'
       },
       padding: {
@@ -16,8 +16,7 @@ module.exports = {
       },
       dropShadow: {
         'custom': [
-          '0 10px 8px rgb(0 0 0 / 0.1)',
-          '0px 2px rgba(0, 0, 0, 0.4)'
+          '1px 2px rgba(0, 0, 0, 0.2)'
         ]
       },
       width: {
