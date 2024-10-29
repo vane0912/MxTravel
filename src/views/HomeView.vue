@@ -1,6 +1,6 @@
 <template>
-  <div class="relative h-3/4"> 
-    <div class="absolute left-0 w-full px-20 py-14 flex items-center h-full bg-agency-blue/30 z-10" >
+  <div class="relative h-screen-3/4"> 
+    <div class="absolute left-0 w-full px-20 py-14 flex items-center h-full bg-agency-blue/60 z-10" >
     <div class="w-full">
       <h1 class="text-agency-white drop-shadow-custom mb-6">Explora el mundo con los mejores precios y servicio garantizado</h1>
       <BtnGeneral btnTxt="Cotiza Ahora"/>

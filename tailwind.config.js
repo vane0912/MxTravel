@@ -25,6 +25,7 @@ module.exports = {
       },
       height:{
         'our_services': '4.3rem',
+        'screen-3/4': '75vh'
       },
       borderRadius: {
         '4xl': '1.8rem'
