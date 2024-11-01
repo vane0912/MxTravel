@@ -36,16 +36,36 @@
     <h3 class="text-agency-blue text-center">Lo que nuestros viajeros tienen que compartir</h3>
     <div class="w-5/6 flex gap-x-6 my-11">
       <div class="w-1/2 gap-y-4 flex flex-col">
-        <Testimonials/>
-        <Testimonials/>
+        <Testimonials 
+          :user_img="user_1"
+          link_to_comment="https://www.facebook.com/agenciamxtravel/videos/462245533244703/?comment_id=903972591580956&__cft__[0]=AZXuTd7KImis8ntAeK6WDngn93m1r66ju7iYrjiqS9npwO49yRNHRwB1XlJdbKGgTiYV0rhxtJvhFbeOFoilzTbMaodP3r6vt8IGg0enIlZXpPsE-wUlArsb3okPnq7_j1lOwJC8ZMI76ZZQ7cN1eHTuCHYoP0Qsgz-H0N9xELckawR837DmAPnQT2lQtPV2A_uwLIE2R9C-6oaSVkAqWY4S&__tn__=R]-R"
+          title_txt="Ada Beltran"
+          comment="100% recomendado, les doy un 💯 de 10... La atención, el hotel, los servicios, los paseos, todo es maravilloso, lo recomiendo!!! Pronto volvemos para otro viaje ❤️"
+        />
+        <Testimonials
+          :user_img="user_2"
+          link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid035zriGPjx53FV6QsTwMj34XUy5vZ6zmmEjFbCekNujtFrUzZYbauwff1fwJwocFDJl?comment_id=1410295269842083&__cft__[0]=AZU3KgEIFIao_gGcbp2ZelRkScJONLXBWWxtq3gw7qGWUHMBG1rsegHcNA0kVhPs53AEVnAOrlCy9fnssmcbMLwR5UQTO46iVK7YmbMZ9l8GFE0sHuTig-odQB1SowjPrnRTGqiz8r1UawyXZkm2qmkT8D7m4vkNc-bIcuqdeCuhqp43ViK_9J52CLcd_MlfMDs&__tn__=R-R"
+          title_txt="Anairam Adepez"
+          comment="Excelente servicio MX Travel"
+        />
       </div>
       <div class="w-1/2 gap-y-4 flex flex-col">
-        <Testimonials/>
-        <Testimonials/>
+        <Testimonials
+          :user_img="user_3"
+          link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid026Yrgtzn5WoXGqY87pWCkpKH4LvVxnHwN6t4Lbe8pDz4tQXNWZSr2sF68vt8GdDVcl?comment_id=1038939180558398&__cft__[0]=AZXAvtyieDkjmBNKn0QuOwoU43Dncs8W3J36GHXGFZTvN2qlbIqwIhyu9weKuevOLh6qsJLlTXJqfQpZu6jmK6IU0FKwtF7FhfHIab-b1iVmSRvHIg-WdQhG6LEoRlImbQ9id5Jd2Lm7HehLefjo16GYyC7KCuD7bXY9d_WDh7C7JvxxcbQl_MDgqWOWHPTOIns&__tn__=R]-R"
+          title_txt="Alejandra Ceniceros Terrazas"
+          comment="Fue un placer viajar con ustedes, lo máximo"
+        />
+        <Testimonials
+          :user_img="user_4"
+          link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid02JM4NAiC7kXu7CfZzDjjCyFmFJsd5xxxxkFaqnSHfge9H5eFwjBm2dJ6G9pppaJNel?comment_id=707888184266226&__cft__[0]=AZWsDySQNWzsbskIyyHJKMx_V30scBDr___6XnY4H18TXD9cqprLUsV6y4XeMiVcUaZn-Yqar65Dgc-KKt_nRsc9Up_DXdoHnYP6PqiGDIU_E_6S_2beFvUtB8g1w7YFvCmzYjuy_GRWvf0hAMUfNuAXeaVOEq7x8X46MWg8PMs4p9eH6QHoKZeyNtV6OlbG6XM&__tn__=R-R"
+          title_txt="RySh Kapoor"
+          comment="Satisfecho y Muy contento con el servicio.Muchas gracias"
+        />
       </div>
     </div>
     <h2 class="text-agency-blue text-center">Contactanos</h2>
-    <div class="w-full flex h-fit gap-x-8 mt-8">
+    <div class="w-5/6 flex h-fit gap-x-8 mt-8">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.077869423627!2d-106.14481012437895!3d28.71721878022964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea416a6e49ce81%3A0x8c099eb45f7d56d1!2sMx%20Travel!5e0!3m2!1ses-419!2smx!4v1730423818091!5m2!1ses-419!2smx" 
       class="rounded-3xl w-1/2 h-80" style="border:0;" allowfullscreen="" loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -72,7 +92,10 @@
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import Testimonials from '@/components/Testimonials.vue';
 import { onMounted } from 'vue';
-
+import user_1 from '../assets/about_us/Testimonios/user_1.png'
+import user_2 from '../assets/about_us/Testimonios/user_2.png'
+import user_3 from '../assets/about_us/Testimonios/user_3.png'
+import user_4 from '../assets/about_us/Testimonios/user_4.png'
 onMounted(() => {
   document.title = "Mx Travel - Conocenos";
 })
