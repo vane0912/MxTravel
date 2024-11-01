@@ -13,11 +13,15 @@ module.exports = {
       },
       padding: {
         'padding-grid': '5.6rem',
+        '18': '4.5rem'
       },
       dropShadow: {
         'custom': [
           '1px 2px rgba(0, 0, 0, 0.2)'
-        ]
+        ],
+        'darker': [
+          '0px 6px 2px rgba(0, 0, 0, 0.2)'
+        ],
       },
       width: {
         'our_services': '4.3rem',

@@ -18,15 +18,21 @@ h3{
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
 }
+h4{
+    font-weight:500;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
 p{
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
 }
 p2{
     font-family: "Raleway", sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
 }
 #app, body, html{
     min-height: 100vh;

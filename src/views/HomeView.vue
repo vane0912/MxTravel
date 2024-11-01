@@ -102,7 +102,9 @@
       </div>
     </div>
     <div class="col-span-12 w-full flex justify-center my-12">
-      <BtnGeneral btnTxt="Conocenos"></BtnGeneral>
+      <BtnGeneral 
+      @go-to="router.push('/conocenos')"
+      btnTxt="Conocenos"></BtnGeneral>
     </div>
   </div>
 </template>
@@ -129,6 +131,7 @@ import one_place from '@/assets/why_choose_us/agency_blue/servicios-de-apoyo.png
 import { onMounted, } from 'vue';
 import OurServices from '@/components/OurServices.vue';
 import ChooseUs from '@/components/ChooseUs.vue';
+import router from '@/router';
 
 onMounted(() => {
   document.title = "Mx Travel";
