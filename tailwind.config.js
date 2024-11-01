@@ -21,14 +21,18 @@ module.exports = {
       },
       width: {
         'our_services': '4.3rem',
-        'why_choose_us': '35rem'
+        'why_choose_us': '35rem',
       },
       height:{
         'our_services': '4.3rem',
+        '100' : '26.5rem',
         'screen-3/4': '75vh'
       },
       borderRadius: {
         '4xl': '1.8rem'
+      },
+      minWidth: {
+        '85': '21.5rem',
       }
     },
   },
