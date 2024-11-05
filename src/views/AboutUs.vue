@@ -28,6 +28,7 @@
         <p class="text-agency-blue leading-7 text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
         <BtnGeneral
         class="mt-8"
+        @go-to="router.push('/conocenos#bottom')"
         btn-txt="Cotiza ahora"
         />
       </div>
@@ -140,6 +141,7 @@ import user_1 from '../assets/about_us/Testimonios/user_1.png'
 import user_2 from '../assets/about_us/Testimonios/user_2.png'
 import user_3 from '../assets/about_us/Testimonios/user_3.png'
 import user_4 from '../assets/about_us/Testimonios/user_4.png'
+import router from '@/router';
 onMounted(() => {
   document.title = "Mx Travel - Conocenos";
 })

@@ -9,13 +9,13 @@
       <router-link class="mx-3" to="/conocenos">
         <h3 class="text-agency-white">Conocenos</h3>
       </router-link>
-      <router-link to="/conocenos">
+      <router-link :to="{ path:'/conocenos', hash: '#bottom' }">
         <h3 class="text-agency-white text-center">Cotiza con nosotros</h3>
       </router-link>
     </div>
   </nav>
   <router-view/>
-  <footer class="w-full h-20 flex justify-evenly items-center bg-agency-blue">
+  <footer id="bottom" class="w-full h-20 flex justify-evenly items-center bg-agency-blue">
     <a href="mailto:ventasmxtravel@gmail.com" class="flex justify-center items-center h-fit">
       <img class="w-9 h-9 mr-5" src="./assets/footer_icons/correo-electronico.png" alt="">
       <h3 class="text-agency-white">ventasmxtravel@gmail.com</h3>

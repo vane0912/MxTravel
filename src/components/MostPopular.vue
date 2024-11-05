@@ -1,5 +1,6 @@
 <template>
     <div 
+    @click="router.push('/conocenos#bottom')"
     @mouseover="hovering_state = true"
     @mouseout="hovering_state = false"
     class="w-full relative rounded-2xl drop-shadow-custom cursor-pointer">
@@ -26,6 +27,7 @@
 </template>
 
 <script setup>
+import router from '@/router';
 import { defineProps, ref } from 'vue';
 
 defineProps(['img_src', 'state_title']);
