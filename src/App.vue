@@ -9,7 +9,7 @@
       <router-link class="mx-3" to="/conocenos">
         <h3 class="text-agency-white">Conocenos</h3>
       </router-link>
-      <router-link  to="#">
+      <router-link to="/conocenos">
         <h3 class="text-agency-white text-center">Cotiza con nosotros</h3>
       </router-link>
     </div>
