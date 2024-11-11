@@ -2,7 +2,7 @@
   <div class="pt-18 px-padding-grid flex flex-col items-center">
     <h1 class="text-agency-blue text-center leading-none">¿Quiénes somos?</h1>
     <h3 class="text-agency-blue text-center mt-6">Calidad, confianza y servicio personalizado</h3>
-    <div class="grid-cols-12 grid w-full gap-x-4 gap-y-3 grid-rows-2 my-11">
+    <div class="grid-cols-12 grid w-full gap-x-4 gap-y-3 min-h-100 grid-rows-2 my-11">
       <div class="h-100 col-span-4 row-span-2">
         <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/3.png" alt="">
       </div>

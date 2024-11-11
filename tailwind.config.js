@@ -30,13 +30,22 @@ module.exports = {
       height:{
         'our_services': '4.3rem',
         '100' : '26.5rem',
-        'screen-3/4': '75vh'
+        '150' : '37.5rem'
       },
       borderRadius: {
         '4xl': '1.8rem'
       },
+      maxWidth:{
+        '98': '30rem',
+        '100': '33rem',
+        'screen-2xl': '110rem'
+      },
       minWidth: {
         '85': '21.5rem',
+      },
+      fontSize: {
+        '5xl': '2.5rem',
+        '6xl': '4rem',
       }
     },
   },
