@@ -53,7 +53,7 @@
         <p class="text-agency-blue leading-7  md:text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
         <BtnGeneral
         class="mt-8"
-        @go-to="router.push('/conocenos#bottom')"
+        @go-to="router.push('/conocenos#cotizar')"
         btn-txt="Cotiza ahora"
         />
       </div>
@@ -111,7 +111,7 @@
       </div>
     </div>
   </div>
-  <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7">
+  <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
     <h2 class="text-agency-blue col-span-full  justify-self-center md:text-5xl">Solicita tu cotización</h2>
     <InputForm
     class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"

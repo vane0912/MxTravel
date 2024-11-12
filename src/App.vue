@@ -1,21 +1,21 @@
 <template>
-  <nav class="w-full h-20 bg-agency-blue flex px-padding-grid sticky top-0 z-20 justify-between items-center">
-    <div>
+  <nav class="w-full h-20 bg-agency-blue flex px-padding-grid sticky top-0 z-20 justify-between items-center 2xl:justify-evenly">
+    <div class="w-20 h-20 min-w-20 ">
       <router-link to="/">
-        <img class="w-20 h-20" src="./assets/MxTravel.png" alt="">
+        <img class="w-full h-full" src="./assets/MxTravel.png" alt="">
       </router-link>
     </div>
-    <div class="flex w-2/6 justify-between">
+    <div class="flex gap-x-20">
       <router-link class="mx-3" to="/conocenos">
         <h3 class="text-agency-white md:text-xl">Conocenos</h3>
       </router-link>
-      <router-link :to="{ path:'/conocenos', hash: '#bottom' }">
+      <router-link :to="{ path:'/conocenos', hash: '#cotizar' }">
         <h3 class="text-agency-white text-center md:text-xl">Cotiza con nosotros</h3>
       </router-link>
     </div>
   </nav>
   <router-view/>
-  <footer id="bottom" class="w-full h-20 flex justify-evenly items-center bg-agency-blue">
+  <footer class="w-full h-20 flex justify-evenly items-center bg-agency-blue">
     <a href="mailto:ventasmxtravel@gmail.com" class="flex justify-center items-center h-fit">
       <img class="w-9 h-9 mr-5" src="./assets/footer_icons/correo-electronico.png" alt="">
       <h3 class="text-agency-white">ventasmxtravel@gmail.com</h3>

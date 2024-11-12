@@ -1,6 +1,6 @@
 <template>
     <div 
-    @click="router.push('/conocenos#bottom')"
+    @click="router.push('/conocenos#cotizar')"
     @mouseover="hovering_state = true"
     @mouseout="hovering_state = false"
     class="w-full min-w-60 relative rounded-2xl drop-shadow-custom cursor-pointer">

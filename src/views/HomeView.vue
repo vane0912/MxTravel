@@ -4,7 +4,7 @@
       <div class="w-full 2xl:w-3/4">
         <h1 class="text-agency-white drop-shadow-custom mb-6 md:text-5xl md:leading-relaxed lg:text-6xl">Explora el mundo con los mejores precios y servicio garantizado</h1>
         <BtnGeneral 
-        @go-to="router.push('/conocenos#bottom')"
+        @go-to="router.push('/conocenos#cotizar')"
         btnTxt="Cotiza Ahora"/>
       </div>
     </div>
