@@ -60,8 +60,8 @@
     </div>
     <h2 class="text-agency-blue text-center md:text-5xl">Testimoniales</h2>
     <h3 class="text-agency-blue text-center md:text-xl">Lo que nuestros viajeros tienen que compartir</h3>
-    <div class="w-5/6 flex gap-x-6 my-11">
-      <div class="w-1/2 gap-y-4 flex flex-col">
+    <div class="w-5/6 flex gap-x-6 my-11 flex-col xl:flex-row">
+      <div class="w-full xl:w-1/2 gap-y-4 flex flex-col">
         <Testimonials 
           :user_img="user_1"
           link_to_comment="https://www.facebook.com/agenciamxtravel/videos/462245533244703/?comment_id=903972591580956&__cft__[0]=AZXuTd7KImis8ntAeK6WDngn93m1r66ju7iYrjiqS9npwO49yRNHRwB1XlJdbKGgTiYV0rhxtJvhFbeOFoilzTbMaodP3r6vt8IGg0enIlZXpPsE-wUlArsb3okPnq7_j1lOwJC8ZMI76ZZQ7cN1eHTuCHYoP0Qsgz-H0N9xELckawR837DmAPnQT2lQtPV2A_uwLIE2R9C-6oaSVkAqWY4S&__tn__=R]-R"
@@ -75,7 +75,7 @@
           comment="Excelente servicio MX Travel"
         />
       </div>
-      <div class="w-1/2 gap-y-4 flex flex-col">
+      <div class="w-full mt-5 xl:m-0 xl:w-1/2 gap-y-4 flex flex-col">
         <Testimonials
           :user_img="user_3"
           link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid026Yrgtzn5WoXGqY87pWCkpKH4LvVxnHwN6t4Lbe8pDz4tQXNWZSr2sF68vt8GdDVcl?comment_id=1038939180558398&__cft__[0]=AZXAvtyieDkjmBNKn0QuOwoU43Dncs8W3J36GHXGFZTvN2qlbIqwIhyu9weKuevOLh6qsJLlTXJqfQpZu6jmK6IU0FKwtF7FhfHIab-b1iVmSRvHIg-WdQhG6LEoRlImbQ9id5Jd2Lm7HehLefjo16GYyC7KCuD7bXY9d_WDh7C7JvxxcbQl_MDgqWOWHPTOIns&__tn__=R]-R"
@@ -86,7 +86,7 @@
           :user_img="user_4"
           link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid02JM4NAiC7kXu7CfZzDjjCyFmFJsd5xxxxkFaqnSHfge9H5eFwjBm2dJ6G9pppaJNel?comment_id=707888184266226&__cft__[0]=AZWsDySQNWzsbskIyyHJKMx_V30scBDr___6XnY4H18TXD9cqprLUsV6y4XeMiVcUaZn-Yqar65Dgc-KKt_nRsc9Up_DXdoHnYP6PqiGDIU_E_6S_2beFvUtB8g1w7YFvCmzYjuy_GRWvf0hAMUfNuAXeaVOEq7x8X46MWg8PMs4p9eH6QHoKZeyNtV6OlbG6XM&__tn__=R-R"
           title_txt="RySh Kapoor"
-          comment="Satisfecho y Muy contento con el servicio.Muchas gracias"
+          comment="Satisfecho y Muy contento con el servicio. Muchas gracias"
         />
       </div>
     </div>
