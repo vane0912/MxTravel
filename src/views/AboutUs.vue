@@ -44,11 +44,12 @@
     </div>
     <h2 class="text-agency-blue text-center md:text-5xl">Sobre nuestra agencia</h2>
     <div class="w-5/6 flex gap-x-20 my-11 items-center flex-col-reverse
-    xl:flex-row">
-      <div class="w-full h-96 rounded-2xl xl:w-1/2">
-        <img class="h-full object-cover w-full rounded-2xl" src="../assets/about_us/sobre_nosotros.png" alt="">
+    lg:flex-row">
+      <div class="w-full h-64 rounded-2xl lg:w-1/2 lg:h-96 mt-10 lg:mt-0">
+        <img class="h-full object-cover w-full rounded-2xl" 
+        src="../assets/about_us/sobre_nosotros.png" alt="">
       </div>
-      <div class="w-full xl:w-1/2">
+      <div class="w-full lg:w-1/2">
         <p class="text-agency-blue leading-7  md:text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
         <BtnGeneral
         class="mt-8"
