@@ -46,6 +46,15 @@ module.exports = {
       fontSize: {
         '5xl': '2.5rem',
         '6xl': '4rem',
+      },
+      keyframes:{
+        carousel_animation : {
+          '0%': {transform: 'translateX(0)'},
+          '100%': {transform: 'translateX(-100%)'}
+        }
+      },
+      animation:{
+        carousel: 'carousel_animation 10s linear infinite'
       }
     },
   },

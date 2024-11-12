@@ -7,10 +7,10 @@
     </div>
     <div class="flex w-2/6 justify-between">
       <router-link class="mx-3" to="/conocenos">
-        <h3 class="text-agency-white">Conocenos</h3>
+        <h3 class="text-agency-white md:text-xl">Conocenos</h3>
       </router-link>
       <router-link :to="{ path:'/conocenos', hash: '#bottom' }">
-        <h3 class="text-agency-white text-center">Cotiza con nosotros</h3>
+        <h3 class="text-agency-white text-center md:text-xl">Cotiza con nosotros</h3>
       </router-link>
     </div>
   </nav>

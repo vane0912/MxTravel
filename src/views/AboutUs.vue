@@ -1,31 +1,55 @@
 <template>
-  <div class="pt-18 px-padding-grid flex flex-col items-center">
-    <h1 class="text-agency-blue text-center leading-none">¿Quiénes somos?</h1>
-    <h3 class="text-agency-blue text-center mt-6">Calidad, confianza y servicio personalizado</h3>
-    <div class="grid-cols-12 grid w-full gap-x-4 gap-y-3 min-h-100 grid-rows-2 my-11">
-      <div class="h-100 col-span-4 row-span-2">
+  <div class="pt-18 px-11 flex flex-col items-center
+  md:px-padding-grid">
+    <h1 class="text-agency-blue text-center leading-none md:text-5xl lg:text-6xl">¿Quiénes somos?</h1>
+    <h3 class="text-agency-blue text-center mt-6 md:text-xl">Calidad, confianza y servicio personalizado</h3>
+    <div class="flex w-full gap-x-4 gap-y-3 min-h-100 my-11 overflow-hidden">
+      <div class="flex gap-x-4 animate-carousel
+      md:h-100 md:grid md:grid-cols-12 md:gap-y-3 md:grid-rows-2 md:animate-none">
+        <div class="h-52
+          min-w-52
+          md:row-start-1 md:row-end-3 md:col-span-4 md:h-full md:min-w-0">
+          <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/3.png" alt="">
+        </div>
+        <div class="h-52 min-w-52 md:row-start-1 md:row-end-1 md:col-span-4 md:min-w-0">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/2.png" alt="">
+        </div>
+        <div class="h-52 min-w-52 md:row-start-1 md:row-end-1 md:col-span-4 md:min-w-0">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/1.png" alt="">
+        </div>
+        <div class="h-52 min-w-52 md:row-start-2 md:row-end-3  md:col-span-4 md:min-w-0">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/4.png" alt="">
+        </div>
+        <div class="h-52 min-w-52 md:row-start-2 md:row-end-3 md:col-span-4 md:min-w-0">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/5.png" alt="">
+        </div>
+      </div>
+      <div aria-hidden class="flex gap-x-4 animate-carousel md:hidden">
+        <div class="h-52 row-span-1 min-w-52 ">
         <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/3.png" alt="">
-      </div>
-      <div class="h-52 col-span-4 row-span-1">
-          <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/2.png" alt="">
-      </div>
-      <div class="h-52 col-span-4 row-span-1">
-          <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/1.png" alt="">
-      </div>
-      <div class="h-52 col-span-4 row-span-2">
-          <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/4.png" alt="">
-      </div>
-      <div class="h-52 col-span-4 row-span-2">
-          <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/5.png" alt="">
+        </div>
+        <div class="h-52 row-span-1 min-w-52 ">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/2.png" alt="">
+        </div>
+        <div class="h-52 row-span-1 min-w-52">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/1.png" alt="">
+        </div>
+        <div class="h-52 row-span-1 min-w-52">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/4.png" alt="">
+        </div>
+        <div class="h-52 row-span-1 min-w-52">
+            <img class="object-cover h-full w-full rounded-2xl" src="../assets/about_us/viajes/5.png" alt="">
+        </div>
       </div>
     </div>
-    <h2 class="text-agency-blue text-center">Sobre nuestra agencia</h2>
-    <div class="w-5/6 flex gap-x-20 my-11 items-center">
-      <div class="w-1/2 h-96 rounded-2xl">
+    <h2 class="text-agency-blue text-center md:text-5xl">Sobre nuestra agencia</h2>
+    <div class="w-5/6 flex gap-x-20 my-11 items-center flex-col-reverse
+    xl:flex-row">
+      <div class="w-full h-96 rounded-2xl xl:w-1/2">
         <img class="h-full object-cover w-full rounded-2xl" src="../assets/about_us/sobre_nosotros.png" alt="">
       </div>
-      <div class="w-1/2">
-        <p class="text-agency-blue leading-7 text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
+      <div class="w-full xl:w-1/2">
+        <p class="text-agency-blue leading-7  md:text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
         <BtnGeneral
         class="mt-8"
         @go-to="router.push('/conocenos#bottom')"
@@ -33,8 +57,8 @@
         />
       </div>
     </div>
-    <h2 class="text-agency-blue text-center">Testimoniales</h2>
-    <h3 class="text-agency-blue text-center">Lo que nuestros viajeros tienen que compartir</h3>
+    <h2 class="text-agency-blue text-center md:text-5xl">Testimoniales</h2>
+    <h3 class="text-agency-blue text-center md:text-xl">Lo que nuestros viajeros tienen que compartir</h3>
     <div class="w-5/6 flex gap-x-6 my-11">
       <div class="w-1/2 gap-y-4 flex flex-col">
         <Testimonials 
@@ -65,7 +89,7 @@
         />
       </div>
     </div>
-    <h2 class="text-agency-blue text-center">Contactanos</h2>
+    <h2 class="text-agency-blue text-center md:text-5xl">Contactanos</h2>
     <div class="w-5/6 flex h-fit gap-x-8 mt-8">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.077869423627!2d-106.14481012437895!3d28.71721878022964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea416a6e49ce81%3A0x8c099eb45f7d56d1!2sMx%20Travel!5e0!3m2!1ses-419!2smx!4v1730423818091!5m2!1ses-419!2smx" 
       class="rounded-3xl w-1/2 h-80" style="border:0;" allowfullscreen="" loading="lazy" 
