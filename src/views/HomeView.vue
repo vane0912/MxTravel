@@ -1,12 +1,12 @@
 <template>
   <div class="relative h-150"> 
-    <div class="absolute left-0 w-full px-8 sm:px-20 py-14 flex items-center h-full bg-agency-blue/60 z-10" >
-    <div class="w-full">
-      <h1 class="text-agency-white drop-shadow-custom mb-6 md:text-5xl md:leading-relaxed lg:text-6xl">Explora el mundo con los mejores precios y servicio garantizado</h1>
-      <BtnGeneral 
-      @go-to="router.push('/conocenos#bottom')"
-      btnTxt="Cotiza Ahora"/>
-    </div>
+    <div class="absolute left-0 w-full px-8 sm:px-20 py-14 flex items-center h-full bg-agency-blue/60 z-10 xl:justify-center" >
+      <div class="w-full 2xl:w-3/4">
+        <h1 class="text-agency-white drop-shadow-custom mb-6 md:text-5xl md:leading-relaxed lg:text-6xl">Explora el mundo con los mejores precios y servicio garantizado</h1>
+        <BtnGeneral 
+        @go-to="router.push('/conocenos#bottom')"
+        btnTxt="Cotiza Ahora"/>
+      </div>
     </div>
     <div class="absolute left-0 w-full h-full">
       <img class="object-cover h-full w-full" src="../assets/bg-homepage.png" alt="">

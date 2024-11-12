@@ -3,8 +3,8 @@
   md:px-padding-grid">
     <h1 class="text-agency-blue text-center leading-none md:text-5xl lg:text-6xl">¿Quiénes somos?</h1>
     <h3 class="text-agency-blue text-center mt-6 md:text-xl">Calidad, confianza y servicio personalizado</h3>
-    <div class="flex w-full gap-x-4 gap-y-3 min-h-100 my-11 overflow-hidden">
-      <div class="flex gap-x-4 animate-carousel
+    <div class="flex w-full gap-x-4 gap-y-3 min-h-100 my-11 overflow-hidden md:justify-center">
+      <div class="flex gap-x-4 animate-carousel md:w-full md:max-w-7xl
       md:h-100 md:grid md:grid-cols-12 md:gap-y-3 md:grid-rows-2 md:animate-none">
         <div class="h-52
           min-w-52
@@ -91,11 +91,11 @@
       </div>
     </div>
     <h2 class="text-agency-blue text-center md:text-5xl">Contactanos</h2>
-    <div class="w-5/6 flex h-fit gap-x-8 mt-8">
+    <div class="w-full md:w-5/6 flex h-fit gap-x-8 mt-8 flex-col-reverse lg:flex-row">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.077869423627!2d-106.14481012437895!3d28.71721878022964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea416a6e49ce81%3A0x8c099eb45f7d56d1!2sMx%20Travel!5e0!3m2!1ses-419!2smx!4v1730423818091!5m2!1ses-419!2smx" 
-      class="rounded-3xl w-1/2 h-80" style="border:0;" allowfullscreen="" loading="lazy" 
+      class="rounded-3xl w-full h-80 mt-5 lg:m-0 lg:w-1/2" style="border:0;" allowfullscreen="" loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="bg-agency-blue/10 rounded-3xl w-1/2 h-80 flex flex-col px-12 justify-evenly">
+      <div class="bg-agency-blue/10 rounded-3xl w-full flex-wrap lg:w-1/2 h-80 flex flex-col px-4 sm:px-12 justify-evenly">
         <div>
           <h3 class="text-agency-blue">Correo</h3>
           <p class="text-agency-blue">ventasmxtravel@gmail.com</p>
@@ -112,48 +112,48 @@
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7">
-        <h2 class="text-agency-blue col-start-4 col-end-10 justify-self-center">Solicita tu cotización</h2>
-        <InputForm
-        class="col-start-4 col-end-7"
-        input_txt="Nombre"
-        placeholder_txt="Juan Perez"
-        />
-        <InputForm
-        class="col-start-7 col-end-10"
-        input_txt="Numero de telefono"
-        placeholder_txt="614 1111 1111"
-        />
-        <div class="flex flex-col col-start-4 col-end-7">
-            <h3 class="text-agency-blue"> ¿En que estas interesado?</h3>
-            <select
-            class="h-12  mt-3 bg-agency-blue/10 border-b-2 border-b-agency-blue text-agency-blue px-4">
-                <option value="Paquete Vacacional">Paquete Vacacional</option>
-                <option value="Tramite de visa o pasaporte">Tramite de visa o pasaporte</option>
-                <option value="Boda en la Playa">Boda en la playa</option>
-                <option value="Boletos de avión o autobus">Boleto de avión o autobus</option>
-                <option value="Charter aéreos o terrestre">Charter aéreos o terrestre</option>
-                <option value="Reservación de hotel">Reservación de hotel</option>
-                <option value="Renta de autobus o vans">Renta de autobus o vans</option>
-                <option value="Gestion de Visados">Gestion de Visados</option>
-                <option value="Otro">Otro</option>
-            </select>
-        </div>
-        <InputForm
-        class="col-start-7 col-end-10"
-        placeholder_txt="correo@gmail.com"
-        input_txt="Correo Electrónico (opcional)"
-        />
-        <div class="flex flex-col col-start-4 col-end-10">
-            <h3 class="text-agency-blue">Cuéntanos más detalles</h3>
-            <textarea
-            placeholder="Ej. Lugar de Destino, Numero de personas, Fechas, etc"
-            class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 text-agency-blue placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
-            ></textarea>
-        </div>
-        <BtnGeneral
-        btn-txt="Enviar"
-        class="col-start-4 col-end-10 justify-self-center"
-        />
+    <h2 class="text-agency-blue col-span-full  justify-self-center md:text-5xl">Solicita tu cotización</h2>
+    <InputForm
+    class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"
+    input_txt="Nombre"
+    placeholder_txt="Juan Perez"
+    />
+    <InputForm
+    class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
+    input_txt="Numero de telefono"
+    placeholder_txt="614 1111 1111"
+    />
+    <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-7">
+        <h3 class="text-agency-blue"> ¿En que estas interesado?</h3>
+        <select
+        class="h-12  mt-3 bg-agency-blue/10 border-b-2 border-b-agency-blue text-agency-blue px-4">
+            <option value="Paquete Vacacional">Paquete Vacacional</option>
+            <option value="Tramite de visa o pasaporte">Tramite de visa o pasaporte</option>
+            <option value="Boda en la Playa">Boda en la playa</option>
+            <option value="Boletos de avión o autobus">Boleto de avión o autobus</option>
+            <option value="Charter aéreos o terrestre">Charter aéreos o terrestre</option>
+            <option value="Reservación de hotel">Reservación de hotel</option>
+            <option value="Renta de autobus o vans">Renta de autobus o vans</option>
+            <option value="Gestion de Visados">Gestion de Visados</option>
+            <option value="Otro">Otro</option>
+        </select>
+    </div>
+    <InputForm
+    class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
+    placeholder_txt="correo@gmail.com"
+    input_txt="Correo Electrónico (opcional)"
+    />
+    <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-11">
+        <h3 class="text-agency-blue">Cuéntanos más detalles</h3>
+        <textarea
+        placeholder="Ej. Lugar de Destino, Numero de personas, Fechas, etc"
+        class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 text-agency-blue placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
+        ></textarea>
+    </div>
+    <BtnGeneral
+    btn-txt="Enviar"
+    class="col-start-4 col-end-10 justify-self-center"
+    />
     </div>
 </template>
 
