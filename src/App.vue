@@ -1,11 +1,22 @@
 <template>
-  <nav class="w-full h-20 bg-agency-blue flex px-padding-grid sticky top-0 z-20 justify-between items-center 2xl:justify-evenly">
-    <div class="w-20 h-20 min-w-20 ">
+  <nav class="w-full h-20 bg-agency-blue flex px-10 md:px-padding-grid sticky top-0 z-20 justify-between items-center 2xl:justify-evenly">
+    <div class="w-20 h-20 min-w-20">
       <router-link to="/">
         <img class="w-full h-full" src="./assets/MxTravel.png" alt="">
       </router-link>
     </div>
-    <div class="flex gap-x-20">
+    <div @click="menu_active">
+      <img class="w-10 h-10 cursor-pointer md:hidden" src="./assets/menu.png" alt="">
+    </div>
+    <div v-if="show_menu" class="absolute flex flex-col p-4 w-1/2 gap-y-4 bg-agency-blue/70 right-0 top-20">
+      <router-link @click="show_menu = false" to="/conocenos">
+        <h3 class="text-agency-white">Conocenos</h3>
+      </router-link>
+      <router-link @click="show_menu = false" :to="{ path:'/conocenos', hash: '#cotizar' }">
+        <h3 class="text-agency-white">Cotiza con nosotros</h3>
+      </router-link>
+    </div>
+    <div class="gap-x-20 hidden md:flex">
       <router-link class="mx-3" to="/conocenos">
         <h3 class="text-agency-white md:text-xl">Conocenos</h3>
       </router-link>
@@ -37,4 +48,17 @@
       </a>
     </div>
   </footer>
+
 </template>
+<script setup>
+import { computed, ref, watch, } from 'vue';
+import { useRoute } from 'vue-router';
+
+const show_menu = ref(false)
+const router = useRoute()
+const menu_active = computed(() => { show_menu.value ? show_menu.value = false : show_menu.value = true})
+watch(() => router.path, () =>{
+  show_menu.value = false
+})
+</script>
+
