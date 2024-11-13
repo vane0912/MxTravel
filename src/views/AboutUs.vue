@@ -155,11 +155,21 @@
         class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 text-agency-blue placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
         ></textarea>
     </div>
+    <div v-if="email_sent" class="col-start-4 col-end-10 justify-self-center" >
+      <h3 class="text-agency-blue  text-center">Tu solicitud fue enviada</h3>
+      <p class="text-agency-blue text-center my-4">En breve un agente se contactara contigo para dar seguimiento a tu cotizacion.</p>
+      <p class="text-agency-blue text-center">!Gracias por contactarnos!</p>
+    </div>
+    <div v-if="email_sent_error" class="col-start-4 col-end-10 justify-self-center" >
+      <h3 class="text-agency-blue  text-center">¡Ups! parece que ocurrio un error</h3>
+      <p class="text-agency-blue text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
+    </div>
     <BtnGeneral
+      v-if="!email_sent && !email_sent_error"
       @go-to="send_email()"
       btn-txt="Enviar"
       class="col-start-4 col-end-10 justify-self-center"
-      />
+    />
   </div>
 </template>
 
@@ -175,6 +185,8 @@ import user_4 from '../assets/about_us/Testimonios/user_4.png'
 import router from '@/router';
 import emailjs from '@emailjs/browser';
 const form_items = ref({client_name: '', telephone: '', email: '', service_type: '', trip_details: ''})
+let email_sent = ref(false)
+let email_sent_error = ref(true)
 onMounted(() => {
   document.title = "Mx Travel - Conócenos";
 });
@@ -182,13 +194,11 @@ onMounted(() => {
 function send_email(){
   emailjs.send('contact_service', 'contact_form', form_items.value,{
     publicKey: 'YVRvt3R-JE02612ml'
-  }).then(
-    () => {
-      console.log('SUCCESS!');
-    },
-    (error) => {
-      console.log('FAILED...', error);
-    },
-  );
+  }).then(() => {
+    email_sent.value = true
+    }
+  ).catch((error) =>{
+    email_sent_error.value = true
+  })
 }
 </script>
