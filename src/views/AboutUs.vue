@@ -112,20 +112,23 @@
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
-    <h2 class="text-agency-blue col-span-full  justify-self-center md:text-5xl">Solicita tu cotización</h2>
+    <h2 class="text-agency-blue col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
     <InputForm
     class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"
+    v-model:info_value ="form_items.client_name"
     input_txt="Nombre"
     placeholder_txt="Juan Perez"
     />
     <InputForm
     class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
+    v-model:info_value ="form_items.telephone"
     input_txt="Numero de telefono"
     placeholder_txt="614 1111 1111"
     />
     <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-7">
         <h3 class="text-agency-blue"> ¿En que estas interesado?</h3>
         <select
+        v-model="form_items.service_type"
         class="h-12  mt-3 bg-agency-blue/10 border-b-2 border-b-agency-blue text-agency-blue px-4">
             <option value="Paquete Vacacional">Paquete Vacacional</option>
             <option value="Tramite de visa o pasaporte">Tramite de visa o pasaporte</option>
@@ -141,24 +144,27 @@
     <InputForm
     class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
     placeholder_txt="correo@gmail.com"
+    v-model:info_value ="form_items.email"
     input_txt="Correo Electrónico (opcional)"
     />
     <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-11">
         <h3 class="text-agency-blue">Cuéntanos más detalles</h3>
         <textarea
+        v-model="form_items.trip_details"
         placeholder="Ej. Lugar de Destino, Numero de personas, Fechas, etc"
         class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 text-agency-blue placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
         ></textarea>
     </div>
     <BtnGeneral
-    btn-txt="Enviar"
-    class="col-start-4 col-end-10 justify-self-center"
-    />
-    </div>
+      @go-to="send_email()"
+      btn-txt="Enviar"
+      class="col-start-4 col-end-10 justify-self-center"
+      />
+  </div>
 </template>
 
-<script setup>
-import { onMounted } from 'vue';
+<script setup >
+import { onMounted, ref } from 'vue';
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import Testimonials from '@/components/Testimonials.vue';
 import InputForm from '@/components/InputForm.vue';
@@ -167,7 +173,22 @@ import user_2 from '../assets/about_us/Testimonios/user_2.png'
 import user_3 from '../assets/about_us/Testimonios/user_3.png'
 import user_4 from '../assets/about_us/Testimonios/user_4.png'
 import router from '@/router';
+import emailjs from '@emailjs/browser';
+const form_items = ref({client_name: '', telephone: '', email: '', service_type: '', trip_details: ''})
 onMounted(() => {
-  document.title = "Mx Travel - Conocenos";
-})
+  document.title = "Mx Travel - Conócenos";
+});
+
+function send_email(){
+  emailjs.send('contact_service', 'contact_form', form_items.value,{
+    publicKey: 'YVRvt3R-JE02612ml'
+  }).then(
+    () => {
+      console.log('SUCCESS!');
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
+}
 </script>
