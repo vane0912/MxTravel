@@ -63,13 +63,13 @@
     <div class="w-5/6 flex gap-x-6 my-11 flex-col xl:flex-row">
       <div class="w-full xl:w-1/2 gap-y-4 flex flex-col">
         <Testimonials 
-          :user_img="user_1"
+          :user_img="require('@/assets/about_us/Testimonios/user_1.png')"
           link_to_comment="https://www.facebook.com/agenciamxtravel/videos/462245533244703/?comment_id=903972591580956&__cft__[0]=AZXuTd7KImis8ntAeK6WDngn93m1r66ju7iYrjiqS9npwO49yRNHRwB1XlJdbKGgTiYV0rhxtJvhFbeOFoilzTbMaodP3r6vt8IGg0enIlZXpPsE-wUlArsb3okPnq7_j1lOwJC8ZMI76ZZQ7cN1eHTuCHYoP0Qsgz-H0N9xELckawR837DmAPnQT2lQtPV2A_uwLIE2R9C-6oaSVkAqWY4S&__tn__=R]-R"
           title_txt="Ada Beltran"
           comment="100% recomendado, les doy un 💯 de 10... La atención, el hotel, los servicios, los paseos, todo es maravilloso, lo recomiendo!!! Pronto volvemos para otro viaje ❤️"
         />
         <Testimonials
-          :user_img="user_2"
+          :user_img="require('@/assets/about_us/Testimonios/user_2.png')"
           link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid035zriGPjx53FV6QsTwMj34XUy5vZ6zmmEjFbCekNujtFrUzZYbauwff1fwJwocFDJl?comment_id=1410295269842083&__cft__[0]=AZU3KgEIFIao_gGcbp2ZelRkScJONLXBWWxtq3gw7qGWUHMBG1rsegHcNA0kVhPs53AEVnAOrlCy9fnssmcbMLwR5UQTO46iVK7YmbMZ9l8GFE0sHuTig-odQB1SowjPrnRTGqiz8r1UawyXZkm2qmkT8D7m4vkNc-bIcuqdeCuhqp43ViK_9J52CLcd_MlfMDs&__tn__=R-R"
           title_txt="Anairam Adepez"
           comment="Excelente servicio MX Travel"
@@ -77,13 +77,13 @@
       </div>
       <div class="w-full mt-5 xl:m-0 xl:w-1/2 gap-y-4 flex flex-col">
         <Testimonials
-          :user_img="user_3"
+          :user_img="require('@/assets/about_us/Testimonios/user_3.png')"
           link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid026Yrgtzn5WoXGqY87pWCkpKH4LvVxnHwN6t4Lbe8pDz4tQXNWZSr2sF68vt8GdDVcl?comment_id=1038939180558398&__cft__[0]=AZXAvtyieDkjmBNKn0QuOwoU43Dncs8W3J36GHXGFZTvN2qlbIqwIhyu9weKuevOLh6qsJLlTXJqfQpZu6jmK6IU0FKwtF7FhfHIab-b1iVmSRvHIg-WdQhG6LEoRlImbQ9id5Jd2Lm7HehLefjo16GYyC7KCuD7bXY9d_WDh7C7JvxxcbQl_MDgqWOWHPTOIns&__tn__=R]-R"
           title_txt="Alejandra Ceniceros Terrazas"
           comment="Fue un placer viajar con ustedes, lo máximo"
         />
         <Testimonials
-          :user_img="user_4"
+          :user_img="require('@/assets/about_us/Testimonios/user_4.png')"
           link_to_comment="https://www.facebook.com/agenciamxtravel/posts/pfbid02JM4NAiC7kXu7CfZzDjjCyFmFJsd5xxxxkFaqnSHfge9H5eFwjBm2dJ6G9pppaJNel?comment_id=707888184266226&__cft__[0]=AZWsDySQNWzsbskIyyHJKMx_V30scBDr___6XnY4H18TXD9cqprLUsV6y4XeMiVcUaZn-Yqar65Dgc-KKt_nRsc9Up_DXdoHnYP6PqiGDIU_E_6S_2beFvUtB8g1w7YFvCmzYjuy_GRWvf0hAMUfNuAXeaVOEq7x8X46MWg8PMs4p9eH6QHoKZeyNtV6OlbG6XM&__tn__=R-R"
           title_txt="RySh Kapoor"
           comment="Satisfecho y Muy contento con el servicio. Muchas gracias"
@@ -178,15 +178,11 @@ import { onMounted, ref } from 'vue';
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import Testimonials from '@/components/Testimonials.vue';
 import InputForm from '@/components/InputForm.vue';
-import user_1 from '../assets/about_us/Testimonios/user_1.png'
-import user_2 from '../assets/about_us/Testimonios/user_2.png'
-import user_3 from '../assets/about_us/Testimonios/user_3.png'
-import user_4 from '../assets/about_us/Testimonios/user_4.png'
 import router from '@/router';
 import emailjs from '@emailjs/browser';
 const form_items = ref({client_name: '', telephone: '', email: '', service_type: '', trip_details: ''})
 let email_sent = ref(false)
-let email_sent_error = ref(true)
+let email_sent_error = ref(false)
 onMounted(() => {
   document.title = "Mx Travel - Conócenos";
 });
@@ -197,7 +193,7 @@ function send_email(){
   }).then(() => {
     email_sent.value = true
     }
-  ).catch((error) =>{
+  ).catch(() =>{
     email_sent_error.value = true
   })
 }
