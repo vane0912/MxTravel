@@ -99,7 +99,7 @@
       class="min-w-7 h-7 cursor-pointer" :src=carousel_arr alt="">
     </div>
     <h2 class="col-span-12 w-full my-3 md:text-5xl">¿Por qué elegirnos?</h2>
-    <div class="col-span-12 flex flex-col xl:flex-row justify-between">
+    <div class="col-span-12 flex flex-col justify-between xl:flex-row">
       <div class="w-full hidden xl:flex xl:w-5/12">
         <img 
         class="rounded-4xl h-full w-full object-cover object-center"
