@@ -17,7 +17,7 @@
   </div>
   <div class="grid-cols-12 max-w-screen-xl self-center grid my-11 gap-y-12 px-10  
     md:gap-x-8">
-    <h2 class="w-full col-span-full my-3 md:text-5xl">Los lugares favoritos de nuestros viajeros</h2>
+    <h2 class="w-full col-span-full md:text-5xl">Los lugares favoritos de nuestros viajeros</h2>
     <div class="col-span-full flex gap-x-8 overflow-x-auto overflow-y-hidden">
       <MostPopular
         state_title="El Chepe"
@@ -32,22 +32,19 @@
         :img_src="cancun"
       />
     </div>
-    <h2 class="w-full col-span-12 my-3 md:text-5xl">Nuestros servicios</h2>
-    <div class="flex lg:hidden items-center">
+    <h2 class="w-full col-span-12 md:text-5xl">Nuestros servicios</h2>
+    <div class="flex items-center lg:hidden">
       <img
-      @click="move_carousel('l')"
-      class="min-w-7 h-7 -rotate-180 cursor-pointer" :src=carousel_arr alt="">
+      @click="move_carousel(false)"
+      class="min-w-7 h-7 -rotate-180 cursor-pointer" 
+      :src=carousel_arr alt="Nuestros servicios flecha izquierda">
     </div>
     <div class="col-start-2 col-end-12 flex overflow-x-hidden max-w-60 justify-self-center
       sm:max-w-98 
       md:max-w-100 
       lg:max-w-full lg:w-full lg:col-span-full">
-      <div 
-      ref="carousel_services"
-      class="flex items-center gap-x-4
-      transition-all
-      ease-in
-      duration-300
+      <div ref="carousel_services"
+      class="flex items-center gap-x-4 transition-all ease-in duration-300
       md:w-full
       lg:justify-center lg:flex-wrap
       lg:flex lg:translate-x-0 
@@ -82,7 +79,9 @@
           service_txt="Reservación de hoteles"
           />
         </div>
-        <div class="flex flex-col mt-0 lg:flex-row lg:mt-10 xl:m-0 gap-x-10 xl:flex-col gap-y-10">
+        <div class="flex flex-col mt-0 gap-x-10 gap-y-10
+        lg:flex-row lg:mt-10 xl:m-0
+        xl:flex-col">
           <OurServices
           :img_src="autobus"
           service_txt="Renta de autobuses y vans"
@@ -94,9 +93,9 @@
         </div>
       </div>
     </div>
-    <div class="flex col-start-12 lg:hidden items-center">
+    <div class="flex col-start-12 items-center lg:hidden">
       <img 
-      @click="move_carousel('r')"
+      @click="move_carousel(true)"
       class="min-w-7 h-7 cursor-pointer" :src=carousel_arr alt="">
     </div>
     <h2 class="col-span-12 w-full my-3 md:text-5xl">¿Por qué elegirnos?</h2>
@@ -144,6 +143,7 @@
   </div>
 </template>
 <script setup>
+import { onMounted, ref } from 'vue';
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import MostPopular from '@/components/MostPopular.vue';
 import chepe from '@/assets/el_chepe.png'
@@ -164,7 +164,6 @@ import experience from '@/assets/why_choose_us/agency_blue/diez_años.png'
 import loyalty from '@/assets/why_choose_us/agency_blue/lealtad.png'
 import costumer from '@/assets/why_choose_us/agency_blue/servicio-al-cliente.png'
 import one_place from '@/assets/why_choose_us/agency_blue/servicios-de-apoyo.png'
-import { onMounted, ref } from 'vue';
 import OurServices from '@/components/OurServices.vue';
 import ChooseUs from '@/components/ChooseUs.vue';
 import router from '@/router';
@@ -173,33 +172,22 @@ onMounted(() => {
   document.title = "Mx Travel";
 })
 const carousel_services = ref(); 
-let pix_carousel = 0
+let pix_carousel = 0;
 
-function move_carousel(direction) {
+function move_carousel(direction){
   if(innerWidth < 640){
-    if (direction === 'r' && pix_carousel != -720){
-    pix_carousel -= 240
-    carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }else if(direction === 'l' && pix_carousel != 0){
-      pix_carousel += 240
-      carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }
+    direction && pix_carousel != -720 ? pix_carousel -= 240 
+    : !direction && pix_carousel != 0 ? pix_carousel += 240 
+    : pix_carousel = 0;
   }else if(innerWidth < 768){
-    if (direction === 'r' && pix_carousel != -480){
-    pix_carousel -= 480
-    carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }else if(direction === 'l' && pix_carousel != 0){
-      pix_carousel += 480
-      carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }
+    direction && pix_carousel != -480 ? pix_carousel -= 480 
+    : !direction && pix_carousel != 0 ? pix_carousel += 480 
+    : pix_carousel = 0;
   }else{
-    if (direction === 'r' && pix_carousel != -545){
-    pix_carousel -= 545
-    carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }else if(direction === 'l' && pix_carousel != 0){
-      pix_carousel += 545
-      carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-    }
+    direction && pix_carousel != -545 ? pix_carousel -= 545 
+    : !direction && pix_carousel != 0 ? pix_carousel += 545 
+    : pix_carousel = 0;
   }
+  carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
 }
 </script>
