@@ -8,8 +8,8 @@
             <img class="w-full h-full object-cover rounded-full" :src="user_img" alt="">
         </div>
         <div>
-            <h4 class="text-agency-blue">{{ title_txt }}</h4>
-            <p2 class="text-agency-blue">{{ comment }}</p2>
+            <h4>{{ title_txt }}</h4>
+            <p2>{{ comment }}</p2>
         </div>
     </a>
 </template>

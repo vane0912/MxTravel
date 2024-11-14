@@ -1,8 +1,11 @@
 <template>
   <div class="relative h-150"> 
-    <div class="absolute left-0 w-full px-8 sm:px-20 py-14 flex items-center h-full bg-agency-blue/60 z-10 xl:justify-center" >
+    <div class="absolute left-0 w-full px-8 py-14 flex items-center justify-center h-full bg-agency-blue/60 z-10 
+    md:px-20" >
       <div class="w-full 2xl:w-3/4">
-        <h1 class="text-agency-white drop-shadow-custom mb-6 md:text-5xl md:leading-relaxed lg:text-6xl">Explora el mundo con los mejores precios y servicio garantizado</h1>
+        <h1 class="text-agency-white drop-shadow-custom mb-6 
+        md:text-5xl md:leading-relaxed 
+        lg:text-6xl">Explora el mundo con los mejores precios y servicio garantizado</h1>
         <BtnGeneral 
         @go-to="router.push('/conocenos#cotizar')"
         btnTxt="Cotiza Ahora"/>
@@ -12,10 +15,10 @@
       <img class="object-cover h-full w-full" src="../assets/bg-homepage.png" alt="">
     </div>
   </div>
-  <div class="grid-cols-12 max-w-screen-2xl self-center grid w-full h-fit my-11 gap-y-12 px-10  
-    md:gap-x-8 md:px-padding-grid">
-    <h2 class="text-agency-blue w-full col-span-full my-3 md:text-5xl">Los lugares favoritos de nuestros viajeros</h2>
-    <div class="col-span-full flex gap-8 overflow-x-auto overflow-y-hidden">
+  <div class="grid-cols-12 max-w-screen-xl self-center grid my-11 gap-y-12 px-10  
+    md:gap-x-8">
+    <h2 class="w-full col-span-full my-3 md:text-5xl">Los lugares favoritos de nuestros viajeros</h2>
+    <div class="col-span-full flex gap-x-8 overflow-x-auto overflow-y-hidden">
       <MostPopular
         state_title="El Chepe"
         :img_src="chepe"
@@ -29,14 +32,13 @@
         :img_src="cancun"
       />
     </div>
-    <h2 class="text-agency-blue w-full col-span-12 my-3 md:text-5xl">Nuestros servicios</h2>
+    <h2 class="w-full col-span-12 my-3 md:text-5xl">Nuestros servicios</h2>
     <div class="flex lg:hidden items-center">
       <img
       @click="move_carousel('l')"
       class="min-w-7 h-7 -rotate-180 cursor-pointer" :src=carousel_arr alt="">
     </div>
-    <div 
-      class="col-start-2 col-end-12 flex overflow-x-hidden max-w-60 justify-self-center
+    <div class="col-start-2 col-end-12 flex overflow-x-hidden max-w-60 justify-self-center
       sm:max-w-98 
       md:max-w-100 
       lg:max-w-full lg:w-full lg:col-span-full">
@@ -97,7 +99,7 @@
       @click="move_carousel('r')"
       class="min-w-7 h-7 cursor-pointer" :src=carousel_arr alt="">
     </div>
-    <h2 class="text-agency-blue col-span-12 w-full my-3 md:text-5xl">¿Por qué elegirnos?</h2>
+    <h2 class="col-span-12 w-full my-3 md:text-5xl">¿Por qué elegirnos?</h2>
     <div class="col-span-12 flex flex-col xl:flex-row justify-between">
       <div class="w-full hidden xl:flex xl:w-5/12">
         <img 

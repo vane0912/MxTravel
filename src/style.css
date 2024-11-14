@@ -6,31 +6,37 @@
 h1{
     font-weight:700;
     font-size: 30px;
+    color: #2B6CAE;
     font-family: "Montserrat", sans-serif;
 }
 h2{
     font-weight:700;
     font-size: 25px;
+    color: #2B6CAE;
     font-family: "Montserrat", sans-serif;
 }
 h3{
     font-weight: 600;
     font-size: 18px;
+    color: #2B6CAE;
     font-family: "Montserrat", sans-serif;
 }
 h4{
     font-weight:500;
     font-size: 16px;
+    color: #2B6CAE;
     font-family: "Montserrat", sans-serif;
 }
 
 p, input, select, textarea{
     font-family: "Raleway", sans-serif;
+    color: #2B6CAE;
     font-weight: 400;
     font-size: 16px;
 }
 p2{
     font-family: "Raleway", sans-serif;
+    color: #2B6CAE;
     font-weight: 300;
     font-size: 14px;
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="pt-18 px-11 flex flex-col items-center
   md:px-padding-grid">
-    <h1 class="text-agency-blue text-center leading-none md:text-5xl lg:text-6xl">¿Quiénes somos?</h1>
-    <h3 class="text-agency-blue text-center mt-6 md:text-xl">Calidad, confianza y servicio personalizado</h3>
+    <h1 class=" text-center leading-none md:text-5xl lg:text-6xl">¿Quiénes somos?</h1>
+    <h3 class=" text-center mt-6 md:text-xl">Calidad, confianza y servicio personalizado</h3>
     <div class="flex w-full gap-x-4 gap-y-3 min-h-100 my-11 overflow-hidden md:justify-center">
       <div class="flex gap-x-4 animate-carousel md:w-full md:max-w-7xl
       md:h-100 md:grid md:grid-cols-12 md:gap-y-3 md:grid-rows-2 md:animate-none">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <h2 class="text-agency-blue text-center md:text-5xl">Sobre nuestra agencia</h2>
+    <h2 class=" text-center md:text-5xl">Sobre nuestra agencia</h2>
     <div class="w-5/6 flex gap-x-20 my-11 items-center flex-col-reverse
     lg:flex-row">
       <div class="w-full h-64 rounded-2xl lg:w-1/2 lg:h-96 mt-10 lg:mt-0">
@@ -50,7 +50,7 @@
         src="../assets/about_us/sobre_nosotros.png" alt="">
       </div>
       <div class="w-full lg:w-1/2">
-        <p class="text-agency-blue leading-7  md:text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
+        <p class=" leading-7  md:text-lg">Somos Mx Travel, una agencia de viajes en Chihuahua con más de 10 años de experiencia y registro nacional de turismo. Ofrecemos desde paquetes vacacionales hasta asesoría en trámites, cuidando cada detalle para que disfrutes una experiencia única.</p>
         <BtnGeneral
         class="mt-8"
         @go-to="router.push('/conocenos#cotizar')"
@@ -58,8 +58,8 @@
         />
       </div>
     </div>
-    <h2 class="text-agency-blue text-center md:text-5xl">Testimoniales</h2>
-    <h3 class="text-agency-blue text-center md:text-xl">Lo que nuestros viajeros tienen que compartir</h3>
+    <h2 class=" text-center md:text-5xl">Testimoniales</h2>
+    <h3 class=" text-center md:text-xl">Lo que nuestros viajeros tienen que compartir</h3>
     <div class="w-5/6 flex gap-x-6 my-11 flex-col xl:flex-row">
       <div class="w-full xl:w-1/2 gap-y-4 flex flex-col">
         <Testimonials 
@@ -90,29 +90,29 @@
         />
       </div>
     </div>
-    <h2 class="text-agency-blue text-center md:text-5xl">Contactanos</h2>
+    <h2 class=" text-center md:text-5xl">Contactanos</h2>
     <div class="w-full md:w-5/6 flex h-fit gap-x-8 mt-8 flex-col-reverse lg:flex-row">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.077869423627!2d-106.14481012437895!3d28.71721878022964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea416a6e49ce81%3A0x8c099eb45f7d56d1!2sMx%20Travel!5e0!3m2!1ses-419!2smx!4v1730423818091!5m2!1ses-419!2smx" 
       class="rounded-3xl w-full h-80 mt-5 lg:m-0 lg:w-1/2" style="border:0;" allowfullscreen="" loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="bg-agency-blue/10 rounded-3xl w-full flex-wrap lg:w-1/2 h-80 flex flex-col px-4 sm:px-12 justify-evenly">
         <div>
-          <h3 class="text-agency-blue">Correo</h3>
-          <p class="text-agency-blue">ventasmxtravel@gmail.com</p>
+          <h3 >Correo</h3>
+          <p>ventasmxtravel@gmail.com</p>
         </div>
         <div>
-          <h3 class="text-agency-blue">Whatsapp</h3>
-          <p class="text-agency-blue">+52 614 599 7193</p>
+          <h3 >Whatsapp</h3>
+          <p class="">+52 614 599 7193</p>
         </div>
         <div>
-          <h3 class="text-agency-blue">Oficinas</h3>
-          <p class="text-agency-blue">Paseos de San Carlos 14962, Col. Paseos de Chihuahua. Chihuahua, Chihuahua Mexico</p>
+          <h3>Oficinas</h3>
+          <p>Paseos de San Carlos 14962, Col. Paseos de Chihuahua. Chihuahua, Chihuahua Mexico</p>
         </div>
       </div>
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
-    <h2 class="text-agency-blue col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
+    <h2 class=" col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
     <InputForm
     class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"
     v-model:info_value ="form_items.client_name"
@@ -126,10 +126,10 @@
     placeholder_txt="614 1111 1111"
     />
     <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-7">
-        <h3 class="text-agency-blue"> ¿En que estas interesado?</h3>
+        <h3> ¿En que estas interesado?</h3>
         <select
         v-model="form_items.service_type"
-        class="h-12  mt-3 bg-agency-blue/10 border-b-2 border-b-agency-blue text-agency-blue px-4">
+        class="h-12  mt-3 bg-agency-blue/10 border-b-2 border-b-agency-blue  px-4">
             <option value="Paquete Vacacional">Paquete Vacacional</option>
             <option value="Tramite de visa o pasaporte">Tramite de visa o pasaporte</option>
             <option value="Boda en la Playa">Boda en la playa</option>
@@ -148,21 +148,21 @@
     input_txt="Correo Electrónico (opcional)"
     />
     <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-11">
-        <h3 class="text-agency-blue">Cuéntanos más detalles</h3>
+        <h3>Cuéntanos más detalles</h3>
         <textarea
         v-model="form_items.trip_details"
         placeholder="Ej. Lugar de Destino, Numero de personas, Fechas, etc"
-        class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 text-agency-blue placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
+        class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
         ></textarea>
     </div>
     <div v-if="email_sent" class="col-start-4 col-end-10 justify-self-center" >
-      <h3 class="text-agency-blue  text-center">Tu solicitud fue enviada</h3>
-      <p class="text-agency-blue text-center my-4">En breve un agente se contactara contigo para dar seguimiento a tu cotizacion.</p>
-      <p class="text-agency-blue text-center">!Gracias por contactarnos!</p>
+      <h3 class="  text-center">Tu solicitud fue enviada</h3>
+      <p class=" text-center my-4">En breve un agente se contactara contigo para dar seguimiento a tu cotizacion.</p>
+      <p class=" text-center">!Gracias por contactarnos!</p>
     </div>
     <div v-if="email_sent_error" class="col-start-4 col-end-10 justify-self-center" >
-      <h3 class="text-agency-blue  text-center">¡Ups! parece que ocurrio un error</h3>
-      <p class="text-agency-blue text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
+      <h3 class="  text-center">¡Ups! parece que ocurrio un error</h3>
+      <p class=" text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
     </div>
     <BtnGeneral
       v-if="!email_sent && !email_sent_error"
