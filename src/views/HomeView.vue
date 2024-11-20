@@ -33,23 +33,12 @@
       />
     </div>
     <h2 class="w-full col-span-12 md:text-5xl">Nuestros servicios</h2>
-    <div class="flex items-center lg:hidden">
-      <img
-      @click="move_carousel(false)"
-      class="min-w-7 h-7 -rotate-180 cursor-pointer" 
-      src="@/assets/carousel_arr.png" alt="Nuestros servicios flecha izquierda">
-    </div>
-    <div class="col-start-2 col-end-12 flex overflow-x-hidden max-w-60 justify-self-center
-      sm:max-w-98 
-      md:max-w-100 
-      lg:max-w-full lg:w-full lg:col-span-full">
-      <div ref="carousel_services"
-      class="flex items-center gap-x-4 transition-all ease-in duration-300
-      md:w-full
-      lg:justify-center lg:flex-wrap
-      lg:flex lg:translate-x-0 
+    <div class="flex overflow-x-hidden justify-self-center w-full col-span-full">
+      <div class="flex items-center gap-x-4 gap-y-5 transition-all ease-in duration-300 animate-carousel
+      md:w-full md:animate-none
+      md:justify-center md:flex-wrap
+      md:flex lg:translate-x-0 
       xl:justify-between">
-        <div class="flex flex-col gap-y-10">
           <OurServices
           :img_src="require('@/assets/our_services/agency_blue/playa.png')"
           service_txt="Paquetes Vacacionales"
@@ -58,8 +47,6 @@
           :img_src="require('@/assets/our_services/agency_blue/pasaporte.png')"
           service_txt="Tramite de visas y pasaporte"
           />
-        </div>
-        <div class="flex flex-col gap-y-10">
           <OurServices
           :img_src="require('@/assets/our_services/agency_blue/boda.png')"
           service_txt="Bodas en la playa"
@@ -68,8 +55,6 @@
           :img_src="require('@/assets/our_services/agency_blue/boletos-de-avion.png')"
           service_txt="Boletos de avión y autobus"
           />
-        </div>
-        <div class="flex flex-col gap-y-10">
           <OurServices
           :img_src="require('@/assets/our_services/agency_blue/avion.png')"
           service_txt="Charters aéreos y terrestres"
@@ -78,10 +63,6 @@
           :img_src="require('@/assets/our_services/agency_blue/hotel.png')"
           service_txt="Reservación de hoteles"
           />
-        </div>
-        <div class="flex flex-col mt-0 gap-x-10 gap-y-10
-        lg:flex-row lg:mt-10 xl:m-0
-        xl:flex-col">
           <OurServices
           :img_src="require('@/assets/our_services/agency_blue/autobus.png')"
           service_txt="Renta de autobuses y vans"
@@ -90,13 +71,41 @@
           :img_src="require('@/assets/our_services/agency_blue/visa.png')"
           service_txt="Gestion de Visados"
           />
-        </div>
       </div>
-    </div>
-    <div class="flex col-start-12 items-center lg:hidden">
-      <img 
-      @click="move_carousel(true)"
-      class="min-w-7 h-7 cursor-pointer" src='@/assets/carousel_arr.png' alt="">
+      <div aria-hidden class="flex gap-x-4 ml-4 animate-carousel md:hidden">
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/playa.png')"
+          service_txt="Paquetes Vacacionales"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/pasaporte.png')"
+          service_txt="Tramite de visas y pasaporte"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/boda.png')"
+          service_txt="Bodas en la playa"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/boletos-de-avion.png')"
+          service_txt="Boletos de avión y autobus"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/avion.png')"
+          service_txt="Charters aéreos y terrestres"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/hotel.png')"
+          service_txt="Reservación de hoteles"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/autobus.png')"
+          service_txt="Renta de autobuses y vans"
+          />
+          <OurServices
+          :img_src="require('@/assets/our_services/agency_blue/visa.png')"
+          service_txt="Gestion de Visados"
+          />
+      </div>
     </div>
     <h2 class="col-span-12 w-full my-3 md:text-5xl">¿Por qué elegirnos?</h2>
     <div class="col-span-12 flex flex-col justify-between xl:flex-row">
@@ -154,23 +163,5 @@ import router from '@/router';
 onMounted(() => {
   document.title = "Mx Travel";
 })
-const carousel_services = ref(); 
-let pix_carousel = 0;
 
-function move_carousel(direction){
-  if(innerWidth < 640){
-    direction && pix_carousel != -720 ? pix_carousel -= 240 
-    : !direction && pix_carousel != 0 ? pix_carousel += 240 
-    : pix_carousel = 0;
-  }else if(innerWidth < 768){
-    direction && pix_carousel != -480 ? pix_carousel -= 480 
-    : !direction && pix_carousel != 0 ? pix_carousel += 480 
-    : pix_carousel = 0;
-  }else{
-    direction && pix_carousel != -545 ? pix_carousel -= 545 
-    : !direction && pix_carousel != 0 ? pix_carousel += 545 
-    : pix_carousel = 0;
-  }
-  carousel_services.value.style.transform = `translateX(${pix_carousel}px)`; 
-}
 </script>

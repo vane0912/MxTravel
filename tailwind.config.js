@@ -49,7 +49,7 @@ module.exports = {
       },
       keyframes:{
         carousel_animation : {
-          '0%': {transform: 'translateX(0)'},
+          '0%': {transform: 'translateX(1%)'},
           '100%': {transform: 'translateX(-100%)'}
         }
       },
