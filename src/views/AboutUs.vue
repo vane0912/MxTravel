@@ -161,13 +161,14 @@
       <p class=" text-center">!Gracias por contactarnos!</p>
     </div>
     <div v-if="email_sent_error" class="col-start-4 col-end-10 justify-self-center" >
-      <h3 class="  text-center">¡Ups! parece que ocurrio un error</h3>
-      <p class=" text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
+      <h3 class="text-center">¡Ups! parece que ocurrio un error</h3>
+      <p class="text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
     </div>
     <BtnGeneral
       v-if="!email_sent && !email_sent_error"
       @go-to="send_email()"
       btn-txt="Enviar"
+      :class="{'bg-slate-400': email_event}"
       class="col-start-4 col-end-10 justify-self-center"
     />
   </div>
@@ -183,11 +184,13 @@ import emailjs from '@emailjs/browser';
 const form_items = ref({client_name: '', telephone: '', email: '', service_type: '', trip_details: ''})
 let email_sent = ref(false)
 let email_sent_error = ref(false)
+let email_event = ref(false)
 onMounted(() => {
   document.title = "Mx Travel - Conócenos";
 });
 
 function send_email(){
+  email_event.value = true
   emailjs.send('contact_service', 'contact_form', form_items.value,{
     publicKey: 'YVRvt3R-JE02612ml'
   }).then(() => {
