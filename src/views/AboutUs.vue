@@ -112,7 +112,12 @@
     </div>
   </div>
   <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
-    <h2 class=" col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
+    <h2 id="title_cotizacion" class=" col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
+    <div 
+      v-if="empty_inputs"
+      class="col-start-2 col-end-12 bg-red-400 h-fit p-4 flex items-center md:col-start-3 md:col-end-11">
+      <p class="text-agency-white">Por favor completa todos los campos antes de continuar</p>
+    </div>
     <InputForm
     class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"
     v-model:info_value ="form_items.client_name"
@@ -185,19 +190,27 @@ const form_items = ref({client_name: '', telephone: '', email: '', service_type:
 let email_sent = ref(false)
 let email_sent_error = ref(false)
 let email_event = ref(false)
+let empty_inputs = ref(false)
 onMounted(() => {
   document.title = "Mx Travel - Conócenos";
 });
 
 function send_email(){
-  email_event.value = true
-  emailjs.send('contact_service', 'contact_form', form_items.value,{
+  const key_val = Object.entries(form_items.value).filter(([key]) => key !== 'email').every(([element, index]) => index.length > 0)
+  if(key_val){
+    email_event.value = true
+    empty_inputs.value = false
+    emailjs.send('contact_service', 'contact_form', form_items.value,{
     publicKey: 'YVRvt3R-JE02612ml'
-  }).then(() => {
-    email_sent.value = true
-    }
-  ).catch(() =>{
-    email_sent_error.value = true
-  })
+    }).then(() => {
+      email_sent.value = true
+      }
+    ).catch(() =>{
+      email_sent_error.value = true
+    })
+  }else{
+    empty_inputs.value = true
+    document.getElementById('title_cotizacion').scrollIntoView()
+  }
 }
 </script>
