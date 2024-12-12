@@ -5,7 +5,7 @@
     h-fit
     xl:h-32 w-full rounded-xl px-4 py-4 flex items-center gap-6 bg-agency-white drop-shadow-darker">
         <div class="min-w-12 h-12 rounded-full">
-            <img class="w-full h-full object-cover rounded-full" :src="user_img" alt="">
+            <img class="w-full max-w-12 h-full object-cover rounded-full" :src="user_img" alt="">
         </div>
         <div>
             <h4>{{ title_txt }}</h4>
