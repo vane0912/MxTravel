@@ -34,7 +34,8 @@
     </div>
     <h2 class="w-full col-span-12 md:text-5xl">Nuestros servicios</h2>
     <div class="flex overflow-x-hidden justify-self-center w-full col-span-full">
-      <div class="flex items-center gap-x-4 gap-y-5 transition-all ease-in duration-300 animate-carousel
+      <div class="flex items-center gap-x-4 gap-y-5 transition-all ease-in animate-carousel
+      hover:[animation-play-state:paused]
       md:w-full md:animate-none
       md:justify-center md:flex-wrap
       md:flex lg:translate-x-0 

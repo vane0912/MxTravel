@@ -54,7 +54,7 @@ module.exports = {
         }
       },
       animation:{
-        carousel: 'carousel_animation 10s linear infinite'
+        carousel: 'carousel_animation 15s linear infinite'
       }
     },
   },
