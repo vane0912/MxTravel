@@ -1,5 +1,6 @@
 <template>
     <a 
+    target="_blank"
     :href="link_to_comment"
     class="hover:scale-105 hover:delay-200 hover:transition-all hover:ease-in-out
     h-fit
@@ -9,7 +10,7 @@
         </div>
         <div>
             <h4>{{ title_txt }}</h4>
-            <p2>{{ comment }}</p2>
+            <span>{{ comment }}</span>
         </div>
     </a>
 </template>

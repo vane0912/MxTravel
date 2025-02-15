@@ -161,7 +161,7 @@ import router from '@/router';
 
 
 onMounted(() => {
-  document.title = "Mx Travel";
+  document.title = "Agencia de Viajes | Mx Travel";
 })
 
 </script>

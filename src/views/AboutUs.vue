@@ -192,7 +192,7 @@ let email_sent_error = ref(false)
 let email_event = ref(false)
 let empty_inputs = ref(false)
 onMounted(() => {
-  document.title = "Mx Travel - Conócenos";
+  document.title = "Mx Travel | Conocenos";
 });
 
 function send_email(){
