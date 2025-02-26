@@ -23,6 +23,7 @@ import showdown from 'showdown';
 import { onMounted, ref } from 'vue';
 let markdownContent = ref('')
 let markdownTitle = ref('')
+const postTitle = 'This is a test title'
 const postDescription = 'Learn how to optimize your Vue.js blog for SEO using meta tags, structured data, and more.';
 async function getBlog(){
     const converter = new showdown.Converter()
@@ -36,7 +37,12 @@ async function getBlog(){
     meta.name = 'description';
     meta.content = postDescription;
 
+    const meta_title = document.createElement('meta');
+    meta_title.name = 'title';
+    meta_title.content = postTitle;
+
     document.head.appendChild(meta);
+    document.head.appendChild(meta_title);
 }
 onMounted(getBlog)
 
