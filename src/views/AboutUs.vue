@@ -111,26 +111,26 @@
       </div>
     </div>
   </div>
-  <div class="grid-cols-4 px-8 md:p-0 md:grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
-    <h2 id="title_cotizacion" class="col-span-full justify-self-center md:text-5xl">Contactanos</h2>
+  <div class="grid-cols-12 grid w-full h-fit my-11 gap-x-8 gap-y-7" id="cotizar">
+    <h2 id="title_cotizacion" class=" col-span-full justify-self-center md:text-5xl">Solicita tu cotización</h2>
     <div 
       v-if="empty_inputs"
-      class="col-span-full bg-red-400 h-fit p-4 flex items-center md:col-start-3 md:col-end-11">
+      class="col-start-2 col-end-12 bg-red-400 h-fit p-4 flex items-center md:col-start-3 md:col-end-11">
       <p class="text-agency-white">Por favor completa todos los campos antes de continuar</p>
     </div>
     <InputForm
-    class="col-span-full md:col-start-3 md:col-end-7"
+    class="col-start-2 col-end-12 md:col-start-3 md:col-end-7"
     v-model:info_value ="form_items.client_name"
     input_txt="Nombre"
     placeholder_txt="Juan Perez"
     />
     <InputForm
-    class="col-span-full md:col-start-7 md:col-end-11"
+    class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
     v-model:info_value ="form_items.telephone"
     input_txt="Numero de telefono"
     placeholder_txt="614 1111 1111"
     />
-    <div class="flex flex-col col-span-full md:col-start-3 md:col-end-7">
+    <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-7">
         <h3> ¿En que estas interesado?</h3>
         <select
         v-model="form_items.service_type"
@@ -147,12 +147,12 @@
         </select>
     </div>
     <InputForm
-    class="col-span-full md:col-start-7 md:col-end-11"
+    class="col-start-2 col-end-12 md:col-start-7 md:col-end-11"
     placeholder_txt="correo@gmail.com"
     v-model:info_value ="form_items.email"
     input_txt="Correo Electrónico (opcional)"
     />
-    <div class="flex flex-col col-span-full md:col-start-3 md:col-end-11">
+    <div class="flex flex-col col-start-2 col-end-12 md:col-start-3 md:col-end-11">
         <h3>Cuéntanos más detalles</h3>
         <textarea
         v-model="form_items.trip_details"
@@ -160,12 +160,12 @@
         class="h-60  mt-3 p-4 outline-none bg-agency-blue/10 placeholder:text-agency-blue/50 border-b-2 border-b-agency-blue"
         ></textarea>
     </div>
-    <div v-if="email_sent" class="col-span-full md:col-start-4 md:col-end-10 justify-self-center" >
+    <div v-if="email_sent" class="col-start-4 col-end-10 justify-self-center" >
       <h3 class="  text-center">Tu solicitud fue enviada</h3>
       <p class=" text-center my-4">En breve un agente se contactara contigo para dar seguimiento a tu cotizacion.</p>
       <p class=" text-center">!Gracias por contactarnos!</p>
     </div>
-    <div v-if="email_sent_error" class="col-span-full md:col-start-4 md:col-end-10 justify-self-center" >
+    <div v-if="email_sent_error" class="col-start-4 col-end-10 justify-self-center" >
       <h3 class="text-center">¡Ups! parece que ocurrio un error</h3>
       <p class="text-center my-4">Por favor contactanos al 614 599 7193 y envianos la informacion de tu viaje</p>
     </div>
@@ -174,7 +174,7 @@
       @go-to="send_email()"
       btn-txt="Enviar"
       :class="{'bg-slate-400': email_event}"
-      class="col-span-full md:col-start-4 md:col-end-10 justify-self-center"
+      class="col-start-4 col-end-10 justify-self-center"
     />
   </div>
 </template>

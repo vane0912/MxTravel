@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Raleway:wght@100..900&display=swap');
 
 @layer utilities {
    .pause {
@@ -23,7 +22,7 @@ h2{
 }
 h3{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: #2B6CAE;
     font-family: "Montserrat", sans-serif;
 }
@@ -62,8 +61,8 @@ button{
     font-family: "Montserrat", sans-serif;
 }
 .no-scrollbar {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .no-scrollbar::-webkit-scrollbar {
