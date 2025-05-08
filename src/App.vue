@@ -28,7 +28,7 @@
   <router-view/>
   <footer class="w-full h-fit py-6 flex justify-center items-center bg-agency-blue md:flex-row">
     <div class="flex w-5/12 flex-row justify-end lg:flex-row sm:flex-col sm:items-start sm:justify-evenly ">
-      <a href="mailto:ventasmxtravel@gmail.com" class="flex mb-4 justify-center items-center h-fit lg:mb-0">
+      <a href="mailto:ventas.mxtravel2@gmail.com" class="flex mb-4 justify-center items-center h-fit lg:mb-0">
         <img class="w-6 h-6 mr-6 sm:mr-3" src="./assets/footer_icons/correo-electronico.png" alt="">
         <p class="text-agency-white hidden sm:contents">ventasmxtravel@gmail.com</p>
       </a>
