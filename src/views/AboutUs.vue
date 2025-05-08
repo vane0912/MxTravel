@@ -98,7 +98,7 @@
       <div class="bg-agency-blue/10 rounded-3xl w-full flex-wrap lg:w-1/2 h-80 flex flex-col px-4 sm:px-12 justify-evenly">
         <div>
           <h3 >Correo</h3>
-          <p>ventasmxtravel@gmail.com</p>
+          <p>ventas.mxtravel2@gmail.com</p>
         </div>
         <div>
           <h3 >Whatsapp</h3>
