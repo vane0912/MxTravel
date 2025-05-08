@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
     "@emailjs/browser": "^4.4.1",
 <<<<<<< HEAD
+    "core-js": "^3.8.3",
+=======
     "core-js": "^3.42.0",
     "flat": "^6.0.1",
     "showdown": "^2.1.0",
-=======
-    "core-js": "^3.8.3",
->>>>>>> cd2d2d7 (Revert "Blogs")
+>>>>>>> 5696304 (update blogs page)
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

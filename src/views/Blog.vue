@@ -39,7 +39,7 @@ let date_blog = ref('21 Enero')
 
 async function getBlog(){
     const converter = new showdown.Converter()
-    const blog_body = await fetch(`forma-cotizacion-production.up.railway.app/blogs/${route.params.blog_name}`)
+    const blog_body = await fetch(`http://forma-cotizacion-production.up.railway.app/blogs/${route.params.blog_name}`)
     const convert_json = await blog_body.json()
 >>>>>>> 4bed99f (resolve conflicts)
     markdownTitle.value = convert_json[0].blog_title
