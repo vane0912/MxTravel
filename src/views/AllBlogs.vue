@@ -31,7 +31,7 @@ import router from '@/router';
 const all_blogs = ref()
 onMounted(async () => {
     document.title = 'Artículos de viaje'
-    const blog_body = await fetch('http://forma-cotizacion-production.up.railway.app/blogs/all')
+    const blog_body = await fetch('https://forma-cotizacion-production.up.railway.app/blogs/all')
     all_blogs.value = await blog_body.json()
 })
 </script>
