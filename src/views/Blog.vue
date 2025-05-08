@@ -26,7 +26,6 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 let markdownContent = ref('')
 let markdownTitle = ref('')
-<<<<<<< HEAD
 let date_blog = ref('')
 
 async function getBlog(){
@@ -34,14 +33,6 @@ async function getBlog(){
     const blog_body = await fetch(`http://forma-cotizacion-production.up.railway.app/blogs/${route.params.blog_name}`)
     const convert_json = await blog_body.json()
     date_blog.value = convert_json[0].date
-=======
-let date_blog = ref('21 Enero')
-
-async function getBlog(){
-    const converter = new showdown.Converter()
-    const blog_body = await fetch(`http://forma-cotizacion-production.up.railway.app/blogs/${route.params.blog_name}`)
-    const convert_json = await blog_body.json()
->>>>>>> 4bed99f (resolve conflicts)
     markdownTitle.value = convert_json[0].blog_title
     markdownContent.value = converter.makeHtml(convert_json[0].blog_body)
 
@@ -86,14 +77,11 @@ onMounted(getBlog)
         font-weight: bolder;
         color: #2B6CAE;
     }
-<<<<<<< HEAD
     hr{
         border-color: #2B6CAE;
         margin-top: 2rem;
         
     }
-=======
->>>>>>> 4bed99f (resolve conflicts)
     @media only screen and (max-width: 500px) {
         .blogh1{
             font-size: 30px;
