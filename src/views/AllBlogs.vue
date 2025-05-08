@@ -1,11 +1,11 @@
 <template>
     <div class="grid-cols-4 py-20 px-10 md:px-36 grid lg:grid-cols-12 h-fit gap-x-7">
         <h1 class="col-span-full h-fit">Artículos</h1>
-        <div class="bg-agency-white border h-fit border-agency-blue border-b-0 col-span-full xl:col-start-1 xl:col-end-8 rounded-lg mt-10">
+        <div class="bg-agency-white border h-fit border-agency-blue border-b col-span-full xl:col-start-1 xl:col-end-8 rounded-lg mt-10">
             <div
               v-for="(blog, index) in all_blogs"
               :key="index"
-              @click="router.push('/blog/' + blog.blog_title.replace(/ /g, '-'))"
+              @click="router.push('/blogs/' + blog.blog_title.replace(/ /g, '-'))"
               :class="[
                 'py-8 px-9 cursor-pointer hover:bg-agency-blue/10',
                 index !== all_blogs.length - 1 ? 'border-b border-b-agency-blue' : ''
