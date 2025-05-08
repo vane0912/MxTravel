@@ -10,7 +10,6 @@ const routes = [
     path: '/conocenos',
     name: 'About Us',
     component: () => import('../views/AboutUs.vue')
-<<<<<<< HEAD
   },
   {
     path: '/blogs',
@@ -21,8 +20,6 @@ const routes = [
     path: '/blogs/:blog_name',
     name: 'Blog',
     component: () => import('../views/Blog.vue')
-=======
->>>>>>> cd2d2d7 (Revert "Blogs")
   }
 ]
 
