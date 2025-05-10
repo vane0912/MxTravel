@@ -80,6 +80,7 @@ onMounted(getBlog)
     li{
         font-size: 16px;
         font-weight: 400;
+        margin-bottom: 10px;
     }
     hr{
         border-color: #2B6CAE;
