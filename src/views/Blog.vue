@@ -73,9 +73,13 @@ onMounted(getBlog)
     }
     ul{
         margin: 1rem;
-        list-style: decimal;
         font-weight: bolder;
         color: #2B6CAE;
+        list-style: outside;
+    }
+    li{
+        font-size: 16px;
+        font-weight: 400;
     }
     hr{
         border-color: #2B6CAE;
