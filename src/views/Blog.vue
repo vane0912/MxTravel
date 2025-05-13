@@ -53,6 +53,10 @@ onMounted(getBlog)
 </script>
 
 <style>
+    a{
+        font-weight: 600;
+        text-decoration: underline;
+    }
     .blogh1{
         font-weight: 800;
         font-size: 48px;
