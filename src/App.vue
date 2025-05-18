@@ -6,11 +6,11 @@
       </router-link>
     </div>
     <div @click="menu_active">
-      <img class="w-10 h-10 cursor-pointer md:hidden" src="./assets/menu.png" alt="">
+      <img class="w-10 h-10 cursor-pointer lg:hidden" src="./assets/menu.png" alt="">
     </div>
     <div v-if="show_menu" class="absolute flex flex-col p-4 w-full gap-y-4 bg-agency-blue/70 right-0 top-20">
       <router-link @click="show_menu = false" :to="{ path:'/blogs'}">
-        <h3 class="text-agency-white">Artculos de viaje</h3>
+        <h3 class="text-agency-white">Articulos de viaje</h3>
       </router-link>
       <router-link @click="show_menu = false" to="/conocenos">
         <h3 class="text-agency-white">Conocenos</h3>
@@ -19,7 +19,10 @@
         <h3 class="text-agency-white">Cotiza con nosotros</h3>
       </router-link>
     </div>
-    <div class="gap-x-20 hidden md:flex">
+    <div class="gap-x-20 hidden lg:flex">
+      <router-link class="mx-3" to="/blogs">
+        <h3 class="text-agency-white">Articulos de viaje</h3>
+      </router-link>
       <router-link class="mx-3" to="/conocenos">
         <h3 class="text-agency-white md:text-xl">Conocenos</h3>
       </router-link>
