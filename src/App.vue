@@ -51,7 +51,7 @@
 
 </template>
 <script setup>
-import { computed, ref, watch, } from 'vue';
+import { computed, onBeforeMount, ref, watch, } from 'vue';
 import { useRoute } from 'vue-router';
 
 const show_menu = ref(false)
@@ -59,6 +59,9 @@ const router = useRoute()
 const menu_active = computed(() => { show_menu.value ? show_menu.value = false : show_menu.value = true})
 watch(() => router.path, () =>{
   show_menu.value = false
+})
+onBeforeMount(() => {
+  document.title = "Agencia de Viajes | Mx Travel";
 })
 </script>
 

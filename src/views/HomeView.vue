@@ -152,7 +152,7 @@
   </div>
 </template>
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import MostPopular from '@/components/MostPopular.vue';
 import OurServices from '@/components/OurServices.vue';
@@ -160,7 +160,7 @@ import ChooseUs from '@/components/ChooseUs.vue';
 import router from '@/router';
 
 
-onMounted(() => {
+onBeforeMount(() => {
   document.title = "Agencia de Viajes | Mx Travel";
 })
 
