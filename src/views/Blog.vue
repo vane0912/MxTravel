@@ -56,6 +56,7 @@ onMounted(getBlog)
     a{
         font-weight: 600;
         text-decoration: underline;
+        text-decoration: #2B6CAE;
     }
     .blogh1{
         font-weight: 800;
