@@ -9,6 +9,9 @@
       <img class="w-10 h-10 cursor-pointer md:hidden" src="./assets/menu.png" alt="">
     </div>
     <div v-if="show_menu" class="absolute flex flex-col p-4 w-full gap-y-4 bg-agency-blue/70 right-0 top-20">
+      <router-link @click="show_menu = false" :to="{ path:'/blogs'}">
+        <h3 class="text-agency-white">Artculos de viaje</h3>
+      </router-link>
       <router-link @click="show_menu = false" to="/conocenos">
         <h3 class="text-agency-white">Conocenos</h3>
       </router-link>
