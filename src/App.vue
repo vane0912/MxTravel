@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full h-20 bg-agency-blue flex px-10 md:px-padding-grid sticky top-0 z-20 justify-between items-center 2xl:justify-evenly">
+  <nav class="w-full h-20 bg-agency-blue no-underline flex px-10 md:px-padding-grid sticky top-0 z-20 justify-between items-center 2xl:justify-evenly">
     <div class="w-20 h-20 min-w-20">
       <router-link to="/">
         <img class="w-full h-full" src="./assets/MxTravel.png" alt="">
