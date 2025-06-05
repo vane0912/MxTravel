@@ -1,7 +1,9 @@
 <template>
     <div class="grid-cols-4 py-20 px-10 md:px-36 grid lg:grid-cols-12 h-fit gap-x-7">
         <h1 class="col-span-full h-fit">Artículos</h1>
-        <div class="bg-agency-white border h-fit border-agency-blue border-b col-span-full xl:col-start-1 xl:col-end-8 rounded-lg mt-10">
+        <div
+        class="bg-agency-white h-fit col-span-full xl:col-start-1 xl:col-end-8 rounded-lg mt-10">
+            <div v-if="loading" class="border-4 animate-spin border-agency-blue border-r-agency-white rounded-full w-8 h-8"></div>
             <div
               v-for="(blog, index) in all_blogs"
               :key="index"
@@ -25,13 +27,15 @@
     </div>
 </template>
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import BtnGeneral from '@/components/BtnGeneral.vue';
 import router from '@/router';
 const all_blogs = ref()
-onMounted(async () => {
+const loading = ref(true)
+onBeforeMount(async () => {
     document.title = 'Artículos de viaje'
     const blog_body = await fetch('https://forma-cotizacion-production.up.railway.app/blogs/all')
     all_blogs.value = await blog_body.json()
+    return loading.value = false
 })
 </script>
