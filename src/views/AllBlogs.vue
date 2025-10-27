@@ -34,7 +34,7 @@ const all_blogs = ref()
 const loading = ref(true)
 onBeforeMount(async () => {
     document.title = 'Artículos de viaje'
-    const blog_body = await fetch('https://forma-cotizacion-production.up.railway.app/blogs/all')
+    const blog_body = await fetch('https://server-side-mx.vercel.app/blogs/all')
     all_blogs.value = await blog_body.json()
     return loading.value = false
 })
